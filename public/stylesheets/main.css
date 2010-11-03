@@ -1,0 +1,61 @@
+/* line 6, ../../app/stylesheets/main.scss */
+#menu {
+  display: inline;
+  float: left;
+  font-family: Verdana,Geneva,sans-serif;
+  font-size: 12px;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 940px;
+}
+
+/* line 16, ../../app/stylesheets/main.scss */
+#menu ul li {
+  float: left;
+  list-style: none outside none;
+  margin: 0 3px 0 0;
+}
+
+/* line 22, ../../app/stylesheets/main.scss */
+#menu ul li.current_page_item {
+  -moz-border-radius-bottomleft: 5px;
+  -moz-border-radius-bottomright: 5px;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  background: url("../images/background/black_40.png") repeat scroll 0 0 transparent;
+}
+
+/* line 30, ../../app/stylesheets/main.scss */
+#menu ul li.current_page_item a {
+  color: #FFAE00;
+}
+
+/* line 34, ../../app/stylesheets/main.scss */
+#menu ul li a {
+  color: white;
+  display: block;
+  padding: 5px 10px;
+  text-decoration: none;
+}
+
+/* line 41, ../../app/stylesheets/main.scss */
+#menu ul {
+  float: right;
+  margin-bottom: 0;
+}
+
+/* line 46, ../../app/stylesheets/main.scss */
+#menu ul li.page_item {
+  -moz-border-radius-bottomleft: 5px;
+  -moz-border-radius-bottomright: 5px;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  background: url("../images/background/black_40.png") repeat scroll 0 0 transparent;
+}
+
+/* line 54, ../../app/stylesheets/main.scss */
+#menu ul li {
+  float: left;
+  list-style: none outside none;
+  margin: 0 3px 0 0;
+}
