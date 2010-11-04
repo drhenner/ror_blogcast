@@ -176,8 +176,8 @@
 
 /* line 154, ../../app/stylesheets/main.scss */
 .rounded-main-wrapper {
-  -moz-border-radius: 8px;
-  -webkit-border-radius: 8px;
+  -moz-border-radius: 11px;
+  -webkit-border-radius: 11px;
   behavior: url(border-radius.htc);
   background: url("../images/background/black_60.png") repeat scroll 0 0;
 }
