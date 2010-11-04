@@ -1,0 +1,3 @@
+h1. Over-View
+
+This site will house the documentation for the "ror_ecommerce":http://github.com/drhenner/ror_ecommerce ecommerce platform. There is a lot of work to be done. My plan is to create an ecommerce in 15-minutes video. You will need to customize the platform but it should save you hundreds of hours of work.
