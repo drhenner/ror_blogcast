@@ -6,27 +6,40 @@
 <% end %>
 
 <% content_for :footer do -%>
-  RoR ecommerce was created and maintained by David Henner. 
+  RoR ecommerce was created and is maintained by David Henner. 
   <a href="http://github.com/drhenner/ror_ecommerce">ror_ecommerce</a> is free software under the MIT license.
 <% end %>
 
-<h1>RoR Ecommerce</h1>
-
-<p class='span-15'>
-  Welcome to rorecommerce.com.  This site will house the documentation for the ror_ecommerce ecommerce platform.  
-  There is a lot of work to be done.  My plan is to create an ecommerce in 15-minutes video.  You will need to 
-  customize the platform but it should save you hundreds of hours of work.
-</p>
-
-<p class='span-15'>
-  This solution includes, an Admin for  <b>Purchase Orders</b>, 
-  <b>Product creation</b>, <b>Shipments</b>, <b>Fulfillment</b> and <b>creating Orders</b>.  There is a minimal 
-  customer facing shopping cart understanding that this will be customized.  The cart allows 
-  you to track your customers <b>cart history</b> and includes a <b>double entry accounting system</b>.  
-
-  The project has <b>solr searching</b>, <b>compass</b> and <b>blueprint for CSS</b> and uses <b>jQuery</b>.  
-  The gem list is quite large and the project still has a large wish list but it is the most 
-  complete solution for Rails today and it will only get better.
-
-  Please use <b>Ruby 1.9.2</b> and enjoy <b>Rails 3.0</b>.
-</p>
+<div>
+<%= image_tag('logo-name.png', :style => 'width:550px;')%>
+  <div class=' column' style='display:block;'>
+    <p class='span-14 description'>
+      RoR Ecommerce is a complete ecommerce platform written completely in Rails 3, and built to scale.
+    </p>
+    <p class='span-14 info'>
+      Welcome to rorecommerce.com.  This site will house the documentation for the ror_ecommerce ecommerce platform.  
+      There is a lot of work to be done.  My plan is to create an ecommerce in 15-minutes video.  You will need to 
+      customize the platform but it should save you hundreds of hours of work.
+    </p>
+    
+    <div class='install'>
+      git clone git://github.com/drhenner/ror_ecommerce
+    </div>
+  </div>
+  <div id='main-side-column' class=' column'>
+    <h3 id='main-side-column-title'>Features</h3>
+    <ul class='span-7'>
+        <li>Shopping Cart</li>
+        <li>Purchase Orders</li>
+        <li>Product creation</li>
+        <li>Shipments</li>
+        <li>Fulfillment</li>
+        <li>Admin Cart</li>
+        <li>Cart History</li>
+        <li>Solr Searching</li>
+        <li>Wish List</li>
+    </ul>
+  </div>
+</div>
+<div class=' clear'></div>
+<div class=''>Please use <b>Ruby 1.9.2</b> and enjoy <b>Rails 3.0</b>.</div>

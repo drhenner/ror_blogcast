@@ -1,7 +1,34 @@
-/* line 6, ../../app/stylesheets/main.scss */
+/* line 11, ../../app/stylesheets/main.scss */
+.rounded-4 {
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  behavior: url(border-radius.htc);
+}
+
+/* line 15, ../../app/stylesheets/main.scss */
+.rounded-6 {
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  behavior: url(border-radius.htc);
+}
+
+/* line 19, ../../app/stylesheets/main.scss */
+.rounded-8 {
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  behavior: url(border-radius.htc);
+}
+
+/* line 23, ../../app/stylesheets/main.scss */
+.rounded-10 {
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  behavior: url(border-radius.htc);
+}
+
+/* line 28, ../../app/stylesheets/main.scss */
 #menu {
-  display: inline;
-  float: left;
+  display: inline-block;
   font-family: Verdana,Geneva,sans-serif;
   font-size: 12px;
   margin-left: 10px;
@@ -9,14 +36,14 @@
   width: 940px;
 }
 
-/* line 16, ../../app/stylesheets/main.scss */
+/* line 38, ../../app/stylesheets/main.scss */
 #menu ul li {
   float: left;
   list-style: none outside none;
   margin: 0 3px 0 0;
 }
 
-/* line 22, ../../app/stylesheets/main.scss */
+/* line 44, ../../app/stylesheets/main.scss */
 #menu ul li.current_page_item {
   -moz-border-radius-bottomleft: 5px;
   -moz-border-radius-bottomright: 5px;
@@ -25,12 +52,12 @@
   background: url("../images/background/black_40.png") repeat scroll 0 0 transparent;
 }
 
-/* line 30, ../../app/stylesheets/main.scss */
+/* line 52, ../../app/stylesheets/main.scss */
 #menu ul li.current_page_item a {
   color: #FFAE00;
 }
 
-/* line 34, ../../app/stylesheets/main.scss */
+/* line 56, ../../app/stylesheets/main.scss */
 #menu ul li a {
   color: white;
   display: block;
@@ -38,13 +65,13 @@
   text-decoration: none;
 }
 
-/* line 41, ../../app/stylesheets/main.scss */
+/* line 63, ../../app/stylesheets/main.scss */
 #menu ul {
   float: right;
   margin-bottom: 0;
 }
 
-/* line 46, ../../app/stylesheets/main.scss */
+/* line 68, ../../app/stylesheets/main.scss */
 #menu ul li.page_item {
   -moz-border-radius-bottomleft: 5px;
   -moz-border-radius-bottomright: 5px;
@@ -53,20 +80,86 @@
   background: url("../images/background/black_40.png") repeat scroll 0 0 transparent;
 }
 
-/* line 54, ../../app/stylesheets/main.scss */
+/* line 76, ../../app/stylesheets/main.scss */
 #menu ul li {
   float: left;
   list-style: none outside none;
   margin: 0 3px 0 0;
 }
 
-/* line 60, ../../app/stylesheets/main.scss */
+/* line 82, ../../app/stylesheets/main.scss */
+#main {
+  padding: 5px;
+  color: #FFF;
+}
+
+/* line 88, ../../app/stylesheets/main.scss */
+#main h1 {
+  color: #FFF;
+}
+
+/* line 92, ../../app/stylesheets/main.scss */
+#main .install {
+  -moz-border-radius: 14px;
+  -webkit-border-radius: 14px;
+  behavior: url(border-radius.htc);
+  background: none repeat scroll 0 0 #080808;
+  color: white;
+  font-family: Monaco,Courier,monospace;
+  font-size: 13px;
+  padding: 9px;
+  text-align: center;
+}
+
+/* line 102, ../../app/stylesheets/main.scss */
+#main p.description {
+  color: #DFDFBF;
+  font-family: Arial,Helvetica,sans-serif;
+  font-size: 21px;
+  line-height: 30px;
+  margin: 0 0 23px;
+  text-align: center;
+}
+
+/* line 111, ../../app/stylesheets/main.scss */
+#main p.info {
+  color: white;
+  font-family: inherit;
+  font-size: 15px;
+  padding: 9px;
+  text-align: left;
+}
+
+/* line 119, ../../app/stylesheets/main.scss */
+#main-side-column {
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  behavior: url(border-radius.htc);
+  border: 4px solid;
+}
+
+/* line 124, ../../app/stylesheets/main.scss */
+#main-side-column h3 {
+  color: #DFDFBF;
+  font-size: 21px;
+  margin-top: 10px;
+  margin-left: 25px;
+}
+
+/* line 131, ../../app/stylesheets/main.scss */
+#main-side-column li {
+  color: #FFFFFF;
+  list-style: disc outside none;
+  margin-left: 25px;
+}
+
+/* line 137, ../../app/stylesheets/main.scss */
 #footer {
   padding-left: 20px;
   text-align: left;
 }
 
-/* line 65, ../../app/stylesheets/main.scss */
+/* line 142, ../../app/stylesheets/main.scss */
 #footer {
   display: inline;
   float: left;
@@ -76,7 +169,15 @@
   width: 940px;
 }
 
-/* line 73, ../../app/stylesheets/main.scss */
+/* line 150, ../../app/stylesheets/main.scss */
 .page_wrapper {
   background: url("../images/background/lrock002.jpg") repeat scroll 0 0;
+}
+
+/* line 154, ../../app/stylesheets/main.scss */
+.rounded-main-wrapper {
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  behavior: url(border-radius.htc);
+  background: url("../images/background/black_60.png") repeat scroll 0 0;
 }
