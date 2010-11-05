@@ -1,13 +1,9 @@
 <% content_for :menu do -%>
-<ul>
-  <li class='page_item'><%= link_to 'Home', root_path %></li>
-  <li class='page_item'><%= link_to 'Doc', root_path %></li>
-</ul>
+  <%= render :partial => 'shared/menu' %>
 <% end %>
 
 <% content_for :footer do -%>
-  RoR ecommerce was created and is maintained by David Henner. 
-  <a href="http://github.com/drhenner/ror_ecommerce">ror_ecommerce</a> is free software under the MIT license.
+  <%= render :partial => 'shared/footer' %>
 <% end %>
 
 <div>

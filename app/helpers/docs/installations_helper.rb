@@ -1,0 +1,2 @@
+module Docs::InstallationsHelper
+end

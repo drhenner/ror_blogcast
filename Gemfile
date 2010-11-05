@@ -1,4 +1,5 @@
 source 'http://rubygems.org'
+source "http://gems.github.com"
 
 gem 'rails', '3.0.1'
 gem 'jquery-rails'
@@ -9,6 +10,10 @@ gem 'fancy-buttons'
 gem 'acts_as_tree',    :git => 'git://github.com/parasew/acts_as_tree.git'
 gem 'authlogic', "2.1.5"
 gem 'cancan'#, '1.3.2'
+gem 'coderay'#, :git => 'git://github.com/Flameeyes/redcloth.git'#, :branch => 'ruby1.9.2'
+gem 'RedCloth'#, :git => 'git://github.com/jgarber/redcloth.git'
+
+#, :git => 'git://github.com/jgarber/redcloth.git', :branch => 'ruby1.9.2'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'

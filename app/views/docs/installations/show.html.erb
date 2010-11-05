@@ -1,0 +1,112 @@
+<% content_for :menu do -%>
+  <%= render :partial => 'shared/menu' %>
+<% end %>
+
+<% content_for :footer do -%>
+  <%= render :partial => 'shared/footer' %>
+<% end %>
+
+<%= image_tag('logo-name.png', :style => 'width:550px;')%>
+
+<div class='main-docs white-board'>
+  
+  <div class='' style='display:block;'>
+    <p class='margin-sides-10'>
+      Install rvm with ruby 1.9.2 or if you have 1.9.2 on your system your good to go
+    </p>
+    
+    <div class='install'>
+      git clone git://github.com/drhenner/ror_ecommerce
+    </div>
+    
+    <p class='margin-vertical-5 margin-sides-10'>
+      Configure your database.yml file (add the development and test database)
+    </p>
+    
+    <hr/>
+    
+    <p class='margin-vertical-5 margin-sides-10'>
+      <ul>
+        <li>Go into config/initializers/setting and change the encryption code</li>
+        <li>gem install bundler</li>
+        <li>gem install rails -v3.0.1</li>
+        <li>bundle install</li>
+        <li>rake db:create</li>
+        <li>rake db:migrate</li>
+        <li>rake db:seed</li>
+        <li>rake db:test:prepare</li>
+        <li>git submodule init</li>
+        <li>git submodule update</li>
+        <li>gem install compass</li>
+        <li>gem install fancy-buttons</li>
+      </ul>
+    </p>
+    
+    <hr/>
+    
+    <p>
+      Time to start <%= link_to 'Solr', 'http://outoftime.github.com/sunspot/docs/index.html'%> and 
+      <%= link_to 'memcache', 'http://oldwiki.rubyonrails.org/rails/pages/MemCached' %> (yep you better install them)
+      <div class='install'>rake sunspot:solr:start</div>
+      If you decide not to use solr, go into product.rb and delete the following:
+      <pre class='CodeRay' ><%=raw textilize(
+      "<code lang='ruby'>      searchable do
+        text    :name, :default_boost => 2
+        text      :product_keywords
+        text      :description
+        time      :deleted_at
+      end </code>") %></pre>
+      
+      Take a look at setting up solr <br/>
+      <%= link_to 'Solr in 5 minutes', 'http://github.com/outoftime/sunspot/wiki/adding-sunspot-search-to-rails-in-5-minutes-or-less'%>
+
+      
+    </p>
+    <p>
+      <div class='install'>
+        memcached -vv
+      </div>
+        ## you can config many other cache stores but <br/>
+        ## the cookie store will not work (in the admin) and the DB session store will be a dog
+    </p>
+    <p>
+      You Need to create config/config.yml and change the encryption key and paypal or auth.net information.
+      You can also use config/config.yml.example until you get your real info.
+    </p>
+    <p>
+      Paperclip will throw errors if not configured correctly.<br/>
+      if you are on a Ubuntu machine, change this line in environment.rb:<br/>
+      <pre class='CodeRay' >Paperclip.options[:command_path] = "/usr/local/bin"</pre>
+      into:
+      <pre class='CodeRay' >Paperclip.options[:command_path] = "/usr/bin"</pre>
+    </p>
+    
+    <p>
+      Once everything is setup, start up the server with 'rails server' and direct your browser to
+      <b>localhost:3000/admin/overviews</b>
+      <p>
+        Write down the username/password and follow the directions.
+      </p>
+    </p>
+  </div>
+
+</div>
+<div class=' clear'></div>
+<div class=''>Please use <b>Ruby 1.9.2</b> and enjoy <b>Rails 3.0</b>.</div>
+
+<% content_for :right_panel do -%>
+  <div id='main-side-column' class=' '>
+    <h3 id='main-side-column-title'>Features</h3>
+    <ul class='span-7'>
+        <li>Shopping Cart</li>
+        <li>Purchase Orders</li>
+        <li>Product creation</li>
+        <li>Shipments</li>
+        <li>Fulfillment</li>
+        <li>Admin Cart</li>
+        <li>Cart History</li>
+        <li>Solr Searching</li>
+        <li>Wish List</li>
+    </ul>
+  </div>
+<% end %>
