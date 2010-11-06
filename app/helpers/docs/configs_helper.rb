@@ -1,0 +1,2 @@
+module Docs::ConfigsHelper
+end

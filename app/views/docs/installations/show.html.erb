@@ -95,18 +95,5 @@
 <div class=''>Please use <b>Ruby 1.9.2</b> and enjoy <b>Rails 3.0</b>.</div>
 
 <% content_for :right_panel do -%>
-  <div id='main-side-column' class=' '>
-    <h3 id='main-side-column-title'>Features</h3>
-    <ul class='span-7'>
-        <li>Shopping Cart</li>
-        <li>Purchase Orders</li>
-        <li>Product creation</li>
-        <li>Shipments</li>
-        <li>Fulfillment</li>
-        <li>Admin Cart</li>
-        <li>Cart History</li>
-        <li>Solr Searching</li>
-        <li>Wish List</li>
-    </ul>
-  </div>
+  <%= render :partial => 'docs/contents'%>
 <% end %>

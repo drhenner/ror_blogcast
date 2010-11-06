@@ -1,0 +1,67 @@
+<% content_for :menu do -%>
+  <%= render :partial => 'shared/menu' %>
+<% end %>
+
+<% content_for :footer do -%>
+  <%= render :partial => 'shared/footer' %>
+<% end %>
+
+<%= image_tag('logo-name.png', :style => 'width:550px;')%>
+
+<div class='main-docs white-board'>
+  
+  <div class='' style='display:block;'>
+    <p class='margin-sides-10'>
+      One of the first things you will need to do is setup your gateway to accept credit card payments.  You need to open config/config.yml and add your data-sensitive information.  REMEMBER this file should never be added to GIT.  This is secure data and this file should always be stored in a secure location.  I recommend purchasing the <%= link_to 'Peepcode PDF','http://peepcode.com/products/activemerchant-pdf', 'data-popup' => true %> about active merchant if you need more details.
+    </p>
+    <p>
+      <h3>config/config.yml</h3>
+
+      <pre class='CodeRay' ><%=raw textilize(
+      "<code lang='yml'>
+      development: &non_production_settings
+        encryption_key: \\232\\306\\216\\033\\330\\304/\\030\\214\\230w\\r\\350\\352\\322\\bv\\314
+        mailer:
+          server: mail.example.com
+          username: bubba
+          password: s0meth1ngs3cr3t
+        paypal:
+          ip:         192.168.0.1
+          login:      YourPayPalLogin.yahoo.com
+          password:   YourPayPalPassword
+          signature:  YourPayPalSignature
+        authnet:
+          login:      YourAuthNetLogin
+          password:   YourAuthNetPassword
+      test:
+        <<: *non_production_settings
+       </code>") %></pre>
+    </p>
+    <p>
+      <h3>Mail</h3>
+      If you need help setting mail up I suggest watching the 
+      <%= link_to 'Railscast on Mail', 'http://railscasts.com/episodes/206-action-mailer-in-rails-3', 'data-popup' => true %>
+      I suggest keeping the secure passwords in this yml and out of your GIT repo but this railscast gives a great tutorial.
+    </p>
+    <p>
+      <h3>Gateways</h3>
+      There are many payment gateway you can use to collect credit card information.  Three of the most popular are 
+      paypal, authorize.net and braintree.  Judging from my experience all work well.  My advise is to look at each 
+      gateway and make your own choice.  Railscasts has a series of <%= link_to 'good tutorials working with paypal', 'http://railscasts.com/episodes/144-active-merchant-basics', 'data-popup' => true %>. <br/><br/>
+      Remember <b>NEVER</b> ADD CREDIT CARD INFORMATION in your database.  
+      Even encrypted Credit Card information can get you in a lot of trouble.  These payments gateways have great ways 
+      to store Credit Card information for recurring billing and reusing the credit cards.  
+      
+      <h4><%= link_to 'Paypal', 'https://www.x.com/index.jspa', 'data-popup' => true%>                  </h4>
+      <h4><%= link_to 'Authorize.net', 'http://developer.authorize.net/', 'data-popup' => true%>        </h4>
+      <h4><%= link_to 'Braintree', 'http://www.braintreepaymentsolutions.com/', 'data-popup' => true %> </h4>
+    </p>
+  </div>
+
+</div>
+<div class=' clear'></div>
+<div class=''>Please use <b>Ruby 1.9.2</b> and enjoy Rails 3.0.</div>
+
+<% content_for :right_panel do -%>
+  <%= render :partial => 'docs/contents'%>
+<% end %>
