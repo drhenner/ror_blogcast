@@ -1,4 +1,4 @@
-class Docs::ProductsController < ApplicationController
+class Docs::ProductsController < Docs::BaseController
 
   # GET /docs/product
   def show
