@@ -24,10 +24,14 @@
     </p>
     
     <hr/>
-    
+    <p class='margin-vertical-5 margin-sides-10'>
+      Go into config/config.yml and change the encryption_key.
+      <pre class='CodeRay' ><%=raw textilize(
+      "<code lang='ruby'>  aes = OpenSSL::Cipher::Cipher.new('AES-256-CBC')
+  set_encryption_key_to = aes.random_iv </code>") %></pre>
+    </p>
     <p class='margin-vertical-5 margin-sides-10'>
       <ul>
-        <li>Go into config/initializers/setting and change the encryption code</li>
         <li>gem install bundler</li>
         <li>gem install rails -v3.0.1</li>
         <li>bundle install</li>
