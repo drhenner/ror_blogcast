@@ -1,0 +1,2 @@
+module Docs::ProductsHelper
+end

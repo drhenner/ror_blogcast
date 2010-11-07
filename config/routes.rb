@@ -5,7 +5,8 @@ DocEcommerce::Application.routes.draw do
   root :to => "welcome#index"
   namespace :docs do
     resource :installation, :only => [:show]
-    resource :config,      :only => [:show]
+    resource :config,       :only => [:show]
+    resource :product,      :only => [:show]
   end
   # Sample of regular route:
   #   match 'products/:id' => 'catalog#view'
