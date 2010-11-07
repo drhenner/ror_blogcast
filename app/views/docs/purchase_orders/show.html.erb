@@ -1,0 +1,29 @@
+
+<% content_for :menu do -%>
+  <%= render :partial => 'shared/menu' %>
+<% end %>
+
+<% content_for :footer do -%>
+  <%= render :partial => 'shared/footer' %>
+<% end %>
+
+<%= link_to image_tag('logo-name.png', :style => 'width:550px;', "http://github.com/drhenner/ror_ecommerce")%>
+
+<div class='main-docs white-board'>
+  
+  <div class='' style='display:block;'>
+    <p class='margin-sides-10'>
+      Purchase Orders allow you to bring inventory into your application.  Without inventory customers can't add items to their cart.  Items without inventory are put in a 'Save for Later' state.  
+    </p>
+    <p class='margin-sides-10'>
+      To create a purchase order while you are in the admin click on the inventory button.  You will need at add a supplier then create a Purchase order.  The product isn't placed in inventory until until you receive it from the supplier.  Under Inventory click the receive link.  Receive the PO and now you should be ready to purchase the items.
+    </p>
+  </div>
+
+</div>
+<div class=' clear'></div>
+<div class=''>Please use <b>Ruby 1.9.2</b> and enjoy Rails 3.0.</div>
+
+<% content_for :right_panel do -%>
+  <%= render :partial => 'docs/contents'%>
+<% end %>
