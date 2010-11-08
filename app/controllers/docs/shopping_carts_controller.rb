@@ -1,4 +1,4 @@
-class Docs::ShoppingCartsController < ApplicationController
+class Docs::ShoppingCartsController < Docs::BaseController
 
   # GET /docs/shopping_cart
   def show
