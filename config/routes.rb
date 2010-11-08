@@ -8,6 +8,7 @@ DocEcommerce::Application.routes.draw do
     resource :config,       :only => [:show]
     resource :product,      :only => [:show]
     resource :purchase_order,      :only => [:show]
+    resource :shopping_cart,      :only => [:show]
   end
   # Sample of regular route:
   #   match 'products/:id' => 'catalog#view'
