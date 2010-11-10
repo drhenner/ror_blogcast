@@ -19,6 +19,19 @@
     <p class='margin-sides-10'>
       To create a purchase order while you are in the admin click on the inventory button.  You will need at add a supplier then create a Purchase order.  The product isn't placed in inventory until until you receive it from the supplier.  Under Inventory click the receive link.  Receive the PO and now you should be ready to purchase the items.
     </p>
+    
+    <p class='margin-sides-10'>
+      The count in inventory is count_on_hand minus count_pending_to_customer. <br/>
+      The count in stock must be above the minimum inventory.
+    </p>
+    <p class='margin-sides-10'>
+      The minimum inventory is set at Variant::OUT_OF_STOCK_QTY (line 23 of the
+      variants model)<br/>
+      So you need to have an inventory above the minimum out of stock quantity.
+      The normal flow to get inventory into the system is through a purchase
+      orders. 
+    </p>
+    
   </div>
 
 </div>
