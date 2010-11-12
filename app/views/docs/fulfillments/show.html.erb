@@ -13,6 +13,16 @@
   <div class='' style='display:block;'>
     <h3>Fulfillments</h3>
     <p class='margin-sides-10'>
+      Several things happen when you fulfill an order.
+      <ol>
+        <li>Payment is captured</li>
+        <li>Invoice is updated to log leger transactions</li>
+        <li>Shipment is marked as ready to send and associated to the order_items</li>
+        <li>If everything works the request sends the user to the shipment page</li>
+      </ol>
+    </p>
+    <p class='margin-sides-10'>
+      Also many times a user will make an order then call customer service to change their address.  Fulfillments allow a CS user to change the address before the item ships.
     </p>
   </div>
 
