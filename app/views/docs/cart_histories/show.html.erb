@@ -1,0 +1,26 @@
+<% content_for :menu do -%>
+  <%= render :partial => 'shared/menu' %>
+<% end %>
+
+<% content_for :footer do -%>
+  <%= render :partial => 'shared/footer' %>
+<% end %>
+
+<%= link_to image_tag('logo-name-sm.png', :style => 'width:550px;'),  "http://github.com/drhenner/ror_ecommerce" -%>
+
+<div class='main-docs white-board'>
+  
+  <div class='' style='display:block;'>
+    <h3>Cart History</h3>
+    <p class='margin-sides-10'>
+      
+    </p>
+  </div>
+
+</div>
+<div class=' clear'></div>
+<div class=''>Please use <b>Ruby 1.9.2</b> and enjoy Rails 3.0.</div>
+
+<% content_for :right_panel do -%>
+  <%= render :partial => 'docs/contents'%>
+<% end %>
