@@ -1,0 +1,35 @@
+<% content_for :menu do -%>
+  <%= render :partial => 'shared/menu' %>
+<% end %>
+
+<% content_for :footer do -%>
+  <%= render :partial => 'shared/footer' %>
+<% end %>
+
+<div>
+  <%= link_to image_tag('logo-name.png', :style => 'width:550px;', :alt => 'Rails Ecommerce, built to scale.'),  "http://github.com/drhenner/ror_ecommerce" -%>
+  <div class=' column' style='display:block;'>
+    <p class=' description'>
+      RoR Ecommerce is a complete ecommerce platform written completely in Rails 3, and built to scale.
+    </p>
+    <p class=' info'>
+      The goal of this project is to create the most scalable, most developer friendly and most extendable e-commerce platform for Ruby on Rails.  This project is current looking for a core team to help build it into the future.  
+    </p>
+    <p class=' info'>
+      Needs:<br/>
+      <ol>
+        <li> Base functionality (CIM interface). </li>
+        <li> Rack app to extend the cart. </li>
+        <li> Rack app to extend the product details page. </li>
+        <li> Rack app to create a blog within this project. </li>
+        <li> There are an extended number of Rack apps yet to be thought of. </li>
+        <li> Documentation </li>
+        <li> Controller Test </li>
+      </ol>
+      
+    </p>
+  </div>
+
+</div>
+<div class=' clear'></div>
+<div class=''>Please use <b>Ruby 1.9.2</b> and enjoy <b>Rails 3.0</b>.</div>

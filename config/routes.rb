@@ -16,6 +16,9 @@ DocEcommerce::Application.routes.draw do
     resource :cart_history,      :only => [:show]
     resource :solr,      :only => [:show]
   end
+  namespace :info do
+    resource :about,      :only => [:show]
+  end
   # Sample of regular route:
   #   match 'products/:id' => 'catalog#view'
   # Keep in mind you can assign values other than :controller and :action

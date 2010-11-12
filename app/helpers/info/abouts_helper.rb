@@ -1,0 +1,2 @@
+module Info::AboutsHelper
+end
