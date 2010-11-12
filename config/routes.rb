@@ -11,6 +11,9 @@ DocEcommerce::Application.routes.draw do
     resource :shopping_cart,      :only => [:show]
     resource :admin_cart,      :only => [:show]
     resource :shipment,      :only => [:show]
+    resource :fulfillment,      :only => [:show]
+    resource :wish_list,      :only => [:show]
+    resource :cart_history,      :only => [:show]
   end
   # Sample of regular route:
   #   match 'products/:id' => 'catalog#view'
