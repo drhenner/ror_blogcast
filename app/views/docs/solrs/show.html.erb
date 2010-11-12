@@ -1,0 +1,29 @@
+<% content_for :menu do -%>
+  <%= render :partial => 'shared/menu' %>
+<% end %>
+
+<% content_for :footer do -%>
+  <%= render :partial => 'shared/footer' %>
+<% end %>
+
+<%= link_to image_tag('logo-name-sm.png', :style => 'width:550px;'),  "http://github.com/drhenner/ror_ecommerce" -%>
+
+<div class='main-docs white-board'>
+  
+  <div class='' style='display:block;'>
+    <h3>Solr Searching</h3>
+    <p class='margin-sides-10'>
+      Solr is the hot new toy for searching your DB.  Currently this searches the product's name, product_keywords and description.  This can be configured to do fuzzy searching and has many more capabilities.  Add to this search can be easily done.  
+    </p>
+    <p class='margin-sides-10'>
+    Take a look at the <%= link_to 'Sunspot', 'http://outoftime.github.com/sunspot/docs/index.html'%> gem to configure searching to your liking.
+    </p>
+  </div>
+
+</div>
+<div class=' clear'></div>
+<div class=''>Please use <b>Ruby 1.9.2</b> and enjoy Rails 3.0.</div>
+
+<% content_for :right_panel do -%>
+  <%= render :partial => 'docs/contents'%>
+<% end %>
