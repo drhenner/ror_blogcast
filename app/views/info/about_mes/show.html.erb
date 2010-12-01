@@ -1,0 +1,38 @@
+<% content_for :menu do -%>
+  <%= render :partial => 'shared/menu' %>
+<% end %>
+
+<% content_for :footer do -%>
+  <%= render :partial => 'shared/footer' %>
+<% end %>
+
+<div class='main-docs gray-board'>
+  <%= link_to image_tag('logo-name-sm.png', :style => 'width:550px;', 
+                                            :alt => 'Ruby on Rails E-commerce, built to scale.'),  
+                        "http://github.com/drhenner/ror_ecommerce" -%>
+  <div class=' column' style='display:block;'>
+    <p class=' description'>
+      I'm a RoR Developer that started this project because I was angry.  I didn't like the current Ruby ob Rails e-commerce solutions so much I had to write my own solution.  At the end of the day I hope you enjoy this project.
+    </p>
+    <p class=' info'>
+      I currently live in Los Angeles. I am currently looking to find an avenue to start my own business.  This means I need one of two things.  
+      <ol>
+        <li>A contract job on an e-commerce site.  This will allow me to add small bits of functionality to this project while building out a business plan and customer base for my own business.</li>
+        <li>A business partner.  I understand going into business with motivated individuals helps make progress.  Preferably A business partner know a bit about web design and the business world.</li>
+      </ol>
+    </p>
+    <p class=' info'>
+
+    </p>
+    
+    <p class=' info'>
+      Please contact David Henner for more information.  drhenner@yahoo.com
+    </p>
+  </div>
+
+  <div class=' clear'></div>
+  <div class=''>Rails E-commerce, built to scale.</div>
+</div>
+<script>
+  var t=setTimeout("window.location.reload()",900000);
+</script>

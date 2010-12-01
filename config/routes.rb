@@ -18,6 +18,7 @@ DocEcommerce::Application.routes.draw do
   end
   namespace :info do
     resource :about,      :only => [:show]
+    resource :about_me,      :only => [:show]
   end
   # Sample of regular route:
   #   match 'products/:id' => 'catalog#view'
