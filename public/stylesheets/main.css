@@ -204,13 +204,22 @@
   behavior: url(border-radius.htc);
 }
 
-/* line 176, ../../app/stylesheets/main.scss */
+/* line 175, ../../app/stylesheets/main.scss */
+.dark-board {
+  color: #DFDFBF;
+  background-color: #121312;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  behavior: url(border-radius.htc);
+}
+
+/* line 181, ../../app/stylesheets/main.scss */
 .main-docs {
   padding: 5px;
   margin-bottom: 10px;
 }
 
-/* line 182, ../../app/stylesheets/main.scss */
+/* line 187, ../../app/stylesheets/main.scss */
 .rounded-main-wrapper {
   -moz-border-radius: 11px;
   -webkit-border-radius: 11px;
@@ -218,7 +227,7 @@
   background: url("../images/background/black_60.png") repeat scroll 0 0;
 }
 
-/* line 188, ../../app/stylesheets/main.scss */
+/* line 193, ../../app/stylesheets/main.scss */
 .CodeRay {
   background-color: #232323;
   border: 1px solid black;
@@ -230,116 +239,116 @@
   margin: 12px 0;
 }
 
-/* line 198, ../../app/stylesheets/main.scss */
+/* line 203, ../../app/stylesheets/main.scss */
 .CodeRay pre {
   margin: 0px;
   padding: 0px;
 }
 
-/* line 203, ../../app/stylesheets/main.scss */
+/* line 208, ../../app/stylesheets/main.scss */
 .CodeRay .an {
   color: #E7BE69;
 }
 
 /* html attribute */
-/* line 204, ../../app/stylesheets/main.scss */
+/* line 209, ../../app/stylesheets/main.scss */
 .CodeRay .c {
   color: #BC9358;
   font-style: italic;
 }
 
 /* comment */
-/* line 205, ../../app/stylesheets/main.scss */
+/* line 210, ../../app/stylesheets/main.scss */
 .CodeRay .ch {
   color: #509E4F;
 }
 
 /* escaped character */
-/* line 206, ../../app/stylesheets/main.scss */
+/* line 211, ../../app/stylesheets/main.scss */
 .CodeRay .cl {
   color: #FFF;
 }
 
 /* class */
-/* line 207, ../../app/stylesheets/main.scss */
+/* line 212, ../../app/stylesheets/main.scss */
 .CodeRay .co {
   color: #FFF;
 }
 
 /* constant */
-/* line 208, ../../app/stylesheets/main.scss */
+/* line 213, ../../app/stylesheets/main.scss */
 .CodeRay .fl {
   color: #A4C260;
 }
 
 /* float */
-/* line 209, ../../app/stylesheets/main.scss */
+/* line 214, ../../app/stylesheets/main.scss */
 .CodeRay .fu {
   color: #FFC56D;
 }
 
 /* function */
-/* line 210, ../../app/stylesheets/main.scss */
+/* line 215, ../../app/stylesheets/main.scss */
 .CodeRay .gv {
   color: #D0CFFE;
 }
 
 /* global variable */
-/* line 211, ../../app/stylesheets/main.scss */
+/* line 216, ../../app/stylesheets/main.scss */
 .CodeRay .i {
   color: #A4C260;
 }
 
 /* integer */
-/* line 212, ../../app/stylesheets/main.scss */
+/* line 217, ../../app/stylesheets/main.scss */
 .CodeRay .il {
   background: #151515;
 }
 
 /* inline code */
-/* line 213, ../../app/stylesheets/main.scss */
+/* line 218, ../../app/stylesheets/main.scss */
 .CodeRay .iv {
   color: #D0CFFE;
 }
 
 /* instance variable */
-/* line 214, ../../app/stylesheets/main.scss */
+/* line 219, ../../app/stylesheets/main.scss */
 .CodeRay .pp {
   color: #E7BE69;
 }
 
 /* doctype */
-/* line 215, ../../app/stylesheets/main.scss */
+/* line 220, ../../app/stylesheets/main.scss */
 .CodeRay .r {
   color: #CB7832;
 }
 
 /* keyword */
-/* line 216, ../../app/stylesheets/main.scss */
+/* line 221, ../../app/stylesheets/main.scss */
 .CodeRay .rx {
   color: #A4C260;
 }
 
 /* regex */
-/* line 217, ../../app/stylesheets/main.scss */
+/* line 222, ../../app/stylesheets/main.scss */
 .CodeRay .s {
   color: #A4C260;
 }
 
 /* string */
-/* line 218, ../../app/stylesheets/main.scss */
+/* line 223, ../../app/stylesheets/main.scss */
 .CodeRay .sy {
   color: #6C9CBD;
 }
 
 /* symbol */
-/* line 219, ../../app/stylesheets/main.scss */
+/* line 224, ../../app/stylesheets/main.scss */
 .CodeRay .ta {
   color: #E7BE69;
 }
 
 /* html tag */
-/* line 220, ../../app/stylesheets/main.scss */
+/* line 225, ../../app/stylesheets/main.scss */
 .CodeRay .pc {
   color: #6C9CBD;
 }

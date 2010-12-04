@@ -172,6 +172,11 @@
   background-color: #444;
   @include rounded(10px);
 }
+.dark-board {
+  color:#DFDFBF;
+  background-color: #121312;
+  @include rounded(10px);
+}
 
 .main-docs {
   //width:740px;
