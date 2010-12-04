@@ -22,17 +22,17 @@
         <%= yield :menu %>
       </div>
     <% end %>
-  
+
     <% if  yield :header %>
       <div id='header'>
         <%= yield :header %>
       </div>
     <% end %>
-  
+
     <div id='main' class=' span-16 rounded-main-wrapper'>
       <%= yield %>
     </div>
-    
+
     <% if  yield :right_panel %>
       <div id='right-panel' class='span-7 rounded-main-wrapper last'>
         <%= yield :right_panel %>
@@ -44,8 +44,11 @@
       </div>
     <% end %>
   </div>
-  
+
   <%= yield :bottom %>
   <%#= javascript_include_tag 'jquery.min', 'rails', 'jquery-ui-1.8.5.custom.min','application' %>
+  <script>
+    var t=setTimeout("window.location.reload()",900000);
+  </script>
 </body>
 </html>
