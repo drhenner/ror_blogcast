@@ -1,7 +1,7 @@
 DocEcommerce::Application.routes.draw do
   # The priority is based upon order of creation:
   # first created -> highest priority.
-  
+
   root :to => "welcome#index"
   namespace :docs do
     resource :installation, :only => [:show]
@@ -18,7 +18,7 @@ DocEcommerce::Application.routes.draw do
   end
   namespace :info do
     resource :about,      :only => [:show]
-    resource :about_me,      :only => [:show]
+    resource :about_ror,  :only => [:show]
   end
   # Sample of regular route:
   #   match 'products/:id' => 'catalog#view'
@@ -30,7 +30,7 @@ DocEcommerce::Application.routes.draw do
 
   # Sample resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
-  
+
   # Sample resource route with options:
   #   resources :products do
   #     member do
