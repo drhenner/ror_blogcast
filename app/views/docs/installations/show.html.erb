@@ -9,20 +9,20 @@
 <%= link_to image_tag('logo-name-sm.png', :style => 'width:550px;', :alt => 'Rails Ecommerce, built to scale.'),  "http://github.com/drhenner/ror_ecommerce" -%>
 
 <div class='main-docs white-board'>
-  
+
   <div class='' style='display:block;'>
     <p class='margin-sides-10'>
       Install rvm with ruby 1.9.2 or if you have 1.9.2 on your system your good to go
     </p>
-    
+
     <div class='install'>
       git clone git://github.com/drhenner/ror_ecommerce
     </div>
-    
+
     <p class='margin-vertical-5 margin-sides-10'>
       Configure your database.yml file (add the development and test database)
     </p>
-    
+
     <hr/>
     <p class='margin-vertical-5 margin-sides-10'>
       Go into config/config.yml and change the encryption_key.
@@ -33,7 +33,7 @@
     <p class='margin-vertical-5 margin-sides-10'>
       <ul>
         <li>gem install bundler</li>
-        <li>gem install rails -v3.0.1</li>
+        <li>gem install rails -v3.0.3</li>
         <li>bundle install</li>
         <li>rake db:create</li>
         <li>rake db:migrate</li>
@@ -45,11 +45,11 @@
         <li>gem install fancy-buttons</li>
       </ul>
     </p>
-    
+
     <hr/>
-    
+
     <p>
-      Time to start <%= link_to 'Sunspot / Solr', 'http://outoftime.github.com/sunspot/docs/index.html'%> and 
+      Time to start <%= link_to 'Sunspot / Solr', 'http://outoftime.github.com/sunspot/docs/index.html'%> and
       <%= link_to 'memcache', 'http://oldwiki.rubyonrails.org/rails/pages/MemCached' %> (yep you better install them)
       <div class='install'>rake sunspot:solr:start</div>
       If you decide not to use solr, go into product.rb and delete the following:
@@ -60,11 +60,11 @@
         text      :description
         time      :deleted_at
       end </code>") %></pre>
-      
+
       Take a look at setting up solr <br/>
       <%= link_to 'Solr in 5 minutes', 'http://github.com/outoftime/sunspot/wiki/adding-sunspot-search-to-rails-in-5-minutes-or-less'%>
 
-      
+
     </p>
     <p>
       <div class='install'>
@@ -84,7 +84,7 @@
       into:
       <pre class='CodeRay' >Paperclip.options[:command_path] = "/usr/bin"</pre>
     </p>
-    
+
     <p>
       Once everything is setup, start up the server with 'rails server' and direct your browser to
       <b>localhost:3000/admin/overviews</b>
