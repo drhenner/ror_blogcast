@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+
+<head>
+  <title>Ruby on Rails E-commerce</title>
+  <%= stylesheet_link_tag 'style2.css', :media => 'screen' %>
+  <%= %>
+  <%= yield :head %>
+</head>
+
+<body id='home'>
+
+  <div class='wrap' id='main'>
+    <%= yield %>
+  </div>
+
+  <div id='footer'>
+    <div class='wrap'>
+      <ul>
+        <li class='opensource'>
+          <a href="http://www.opensource.org/">we be opensource</a>
+        </li>
+        <li class='viewsource'>Ruby 1.9.2 | Rails 3.0.</li>
+        <li class='dryicons'>ror-e.com&nbsp;&copy;&nbsp;2010</li>
+      </ul>
+    </div>
+  </div>
+
+</body>

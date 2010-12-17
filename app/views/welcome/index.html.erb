@@ -1,47 +1,32 @@
-<% content_for :menu do -%>
-  <%= render :partial => 'shared/menu' %>
-<% end %>
 
-<% content_for :footer do -%>
-  <%= render :partial => 'shared/footer' %>
-<% end %>
 
-<div>
-  <%= link_to image_tag('logo-name.png', :style => 'width:550px;', :alt => 'Rails Ecommerce, built to scale.'),  "http://github.com/drhenner/ror_ecommerce" -%>
-  <div class=' column' style='display:block;'>
-    <p class='span-14 description'>
-      RoR Ecommerce is a complete ecommerce platform written completely in Rails 3, and built to scale.
-    </p>
-    <p class='span-14 info'>
+    <div id='content'>
+      <h1>Ruby on Rails RoR ecommerce</h1>
+      <div class='tagline'>
+        <em>e-commerce made easy</em>
+      </div>
 
-      RORecommerce.com’s goal is simple...to create the BEST, 100% free (open source), e-commerce platform using Ruby on Rails that scales with your business needs. Our project is a creation of dedicated developers focused on developing and maintaining a platform which will save any business the items they value the most...time, effort, resources and most of all, money.
+      <div class='description'>
+        <p>
+          <span style="color:#8b1d1d;">ror_ecommerce is a complete ecommerce platform written completely in Rails 3, and built to scale.</span>
 
-    </p>
-    <p class='span-14 info'>
-      The project is free for commercial use under the MIT license.
-    </p>
-
-    <p class='span-14 info'>
-      There is an e-commerce in 45 minutes video available on <%= link_to 'Vimeo.', 'http://vimeo.com/17448146' %>
-    </p>
-    <div class='install'>
-      git clone git://github.com/drhenner/ror_ecommerce
+          ror-e.com's goal is simple...to create the BEST, 100% free (open source), e-commerce platform using Ruby on Rails that scales with your business needs. Our project is a creation of dedicated developers focused on developing and maintaining a platform which will save any business the items they value the most...time, effort, resources and most of all, money.
+          <span style="color:#8b1d1d;">ror_ecommerce was created and is maintained by David Henner. ror_ecommerce is free software under the MIT license.</span>
+        </p>
+      </div>
+      <ol id='next-steps'>
+        <li class='download'>
+          <%= link_to 'Docs', docs_installation_path %>
+        </li>
+        <li class='info'>
+          <%= link_to 'Info', info_about_path %>
+        </li>
+        <li class='support'>
+          <%= link_to 'About', info_about_ror_path %>
+        </li>
+        <li class='get-involved'>
+          <a href='http://vimeo.com/17448146'>Videos</a>
+        </li>
+      </ol>
     </div>
-  </div>
-  <div id='main-side-column' class=' column'>
-    <h3 id='main-side-column-title'>Features</h3>
-    <ul class='span-7'>
-        <li>Shopping Cart</li>
-        <li>Purchase Orders</li>
-        <li>Product creation</li>
-        <li>Shipments</li>
-        <li>Fulfillment</li>
-        <li>Admin Cart</li>
-        <li>Cart History</li>
-        <li>Solr Searching</li>
-        <li>Wish List</li>
-    </ul>
-  </div>
-</div>
-<div class=' clear'></div>
-<div class=''>Please use <b>Ruby 1.9.2</b> and enjoy <b>Rails 3.0</b>.</div>
+    <div id='layout_footer'></div>
