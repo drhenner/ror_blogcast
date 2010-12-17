@@ -1,31 +1,40 @@
-<% content_for :menu do -%>
-  <%= render :partial => 'shared/menu' %>
-<% end %>
 
-<% content_for :footer do -%>
-  <%= render :partial => 'shared/footer' %>
-<% end %>
 
-<div class='main-docs dark-board'>
-  <%= link_to image_tag('logo-name-sm.png', :style => 'width:550px;',
-                                            :alt => 'Ruby on Rails E-commerce, built to scale.'),
-                        "http://github.com/drhenner/ror_ecommerce" -%>
-  <div class=' column' style='display:block;'>
-    <p class=' description'>
-      RoR Ecommerce started because I wanted a better e-commerce solution.  I didn't like the current Ruby on Rails e-commerce solutions so much I had to write my own.  At the end of the day I hope you enjoy this project.
-    </p>
-    <p class=' info'>
-      Start-up costs are very high and we understand that. RoRecommerce.com’s platform is specifically created to minimize those cost, decrease the time to develop an e-commerce platform in order to start making money and increase the opportunities for success.
-    </p>
-    <p class=' info'>
-      Interested in RoRecommerce.com’s platform? We are currently evaluating potential partnerships and/or professional services opportunities.
-    </p>
 
-    <p class=' info'>
-      Please contact us for more information.  info@rorecommerce.com, 480-323-6537
-    </p>
+<div id='content'>
+  <h1 class='logo2'>Ruby on Rails RoR ecommerce</h1>
+  <div class='tagline'>
+    <em>e-commerce made easy</em>
   </div>
 
-  <div class=' clear'></div>
-  <div class=''>Rails E-commerce, built to scale.</div>
+  <div class='description'>
+    <p>
+      <span style="color:#8b1d1d;">RoR Ecommerce started because I wanted a better e-commerce solution.  I didn't like the current Ruby on Rails e-commerce solutions so much I had to write my own.  At the end of the day I hope you enjoy this project.</span>
+
+      Start-up costs are very high and we understand that. RoR-e.com’s platform is specifically created to minimize those cost, decrease the time to develop an e-commerce platform in order to start making money and increase the opportunities for success.
+
+      <span style="color:#8b1d1d;">Interested in RoR-e.com’s platform? We are currently evaluating potential partnerships and/or professional services opportunities.</span>
+    </p>
+  </div>
+  <ol id='next-steps'>
+    <li class='home-page'>
+      <%= link_to 'Home', root_path %>
+    </li>
+    <li class='download'>
+      <%= link_to 'Docs', docs_installation_path %>
+    </li>
+    <li class='info'>
+      <%= link_to 'Info', info_about_path %>
+    </li>
+    <li class='support'>
+      <%= link_to 'About', info_about_ror_path %>
+    </li>
+    <li class='get-video'>
+      <a href='http://vimeo.com/17448146'>Videos</a>
+    </li>
+    <li class='get-involved'>
+      <a href='http://github.com/drhenner/ror_ecommerce'>Git Hub</a>
+    </li>
+  </ol>
 </div>
+<div id='layout_footer'></div>

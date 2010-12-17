@@ -291,8 +291,16 @@ body#home {
     background-image: url('../images/logo.png');
     background-repeat: no-repeat;
     background-position: 50% 50%;
-    height: 290px;
-    margin-top: 1em; }
+    height: 270px;
+    margin-top: 0.25em; }
+  body#home h1.logo2 {
+    text-indent: -9999em;
+    overflow: hidden;
+    background-image: url('../images/logo-e.png');
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    height: 85px;
+    margin-top: 0.5em; }
   body#home .tagline {
     display: inline;
     float: left;
