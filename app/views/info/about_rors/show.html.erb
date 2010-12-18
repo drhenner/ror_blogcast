@@ -16,28 +16,6 @@
       <span style="color:#8b1d1d;">Interested in RoR-e.com’s platform? We are currently evaluating potential partnerships and/or professional services opportunities.</span>
     </p>
   </div>
-  <ol id='next-steps'>
-    <li class='home-page'>
-      <%= link_to 'Home', root_path %>
-    </li>
-    <li class='download'>
-      <%= link_to 'Docs', docs_installation_path %>
-    </li>
-    <li class='info'>
-      <%= link_to 'Info', info_about_path %>
-    </li>
-    <li class='support'>
-      <%= link_to 'About', info_about_ror_path %>
-    </li>
-    <li class='blog-page'>
-      <%#= link_to 'Blog', posts_path %>
-    </li>
-    <li class='get-video'>
-       <%= link_to 'Videos', 'http://vimeo.com/17448146', 'data-popup' => true %>
-    </li>
-    <li class='get-involved'>
-      <%= link_to 'Git Hub', 'http://github.com/drhenner/ror_ecommerce', 'data-popup' => true %>
-    </li>
-  </ol>
+  <%= render :partial => '/shared/side_menu' %>
 </div>
 <div id='layout_footer'></div>

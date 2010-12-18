@@ -18,28 +18,28 @@
 <script type="text/javascript">jQuery.noConflict();</script> <%= yield :modjs %>
 <%= javascript_include_tag "highlight" %>
 <%= javascript_include_tag "blog" %>
-</head><body>
+</head><body id='home'>
 
 <% if current_user %>
 <div class="adminbar">
 <ul>
-	<li><%= link_to image_tag("stock_spam.png"), post_spams_path(@current_action == "show" && @current_controller =="posts" ? @post : "0-spam-barbecue"), :class => "spam" %></li>
-	<li><%= link_to "Top Posts", posts_path %></li>
-	<li><%= link_to "Create Post", new_post_path %></li>
-	<li><%= link_to "Drafts", drafts_path %></li>
-	<%= yield :adminbar_left %>
-	
-	<li class="right"><%= link_to "Logout", logout_path, :method => :delete, :class => "delete" %></li>
-	<li class="right"><%= link_to "Users", users_path %></li>
-	<%= yield :adminbar_right %>
-	<li class="right"><em>Welcome, <%= current_user.name %></em></li>
+  <li><%= link_to image_tag("stock_spam.png"), post_spams_path(@current_action == "show" && @current_controller =="posts" ? @post : "0-spam-barbecue"), :class => "spam" %></li>
+  <li><%= link_to "Top Posts", posts_path %></li>
+  <li><%= link_to "Create Post", new_post_path %></li>
+  <li><%= link_to "Drafts", drafts_path %></li>
+  <%= yield :adminbar_left %>
+
+  <li class="right"><%= link_to "Logout", logout_path, :method => :delete, :class => "delete" %></li>
+  <li class="right"><%= link_to "Users", users_path %></li>
+  <%= yield :adminbar_right %>
+  <li class="right"><em>Welcome, <%= current_user.name %></em></li>
 </ul>
 </div><!--adminbar-->
 <% end %>
 
 <div class="header">
 <% if !current_user %>
-<h1>Blogcast</h1>
+<h1>RoR-e</h1>
 <% end %>
 </div><!-- header -->
 
@@ -56,10 +56,10 @@
 </div><!--wrapper-->
 
 <div class="footer">
-	<p>
-		Content copyright © 2010 <a href="#">Company, LLC</a>.
-		<span>Powered by <a href="http://techoctave.com/blogcast">Blogcast</a></span>
-	</p>
+  <p>
+    Content copyright © 2010 <a href="#">RoR-e.com, LLC</a>.
+    <span><a href="http://github.com/drhenner/ror_ecommerce">GitHub</a></span>
+  </p>
 </div><!-- footer -->
 <% if Rails.env.production? && !current_user %>
 
