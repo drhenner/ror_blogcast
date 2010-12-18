@@ -7,19 +7,24 @@
   <%= render :partial => 'shared/footer' %>
 <% end %>
 
-<%= link_to image_tag('logo-name-sm.png', :style => 'width:550px;', :alt => 'Rails Ecommerce, built to scale.'),  "http://github.com/drhenner/ror_ecommerce" -%>
+<div class='main-docs white-board logo2'>
+  <%= link_to image_tag('logo-e.png',
+                        :class => 'prepend-3',
+                        :alt => 'Rails Ecommerce, built to scale.'),
+              "http://github.com/drhenner/ror_ecommerce" -%>
+</div>
 
 <div class='main-docs white-board'>
-  
+
   <div class='' style='display:block;'>
     <h3>Purchase Orders</h3>
     <p class='margin-sides-10'>
-      Purchase Orders allow you to bring inventory into your application.  Without inventory customers can't add items to their cart.  Items without inventory are put in a 'Save for Later' state.  
+      Purchase Orders allow you to bring inventory into your application.  Without inventory customers can't add items to their cart.  Items without inventory are put in a 'Save for Later' state.
     </p>
     <p class='margin-sides-10'>
       To create a purchase order while you are in the admin click on the inventory button.  You will need at add a supplier then create a Purchase order.  The product isn't placed in inventory until until you receive it from the supplier.  Under Inventory click the receive link.  Receive the PO and now you should be ready to purchase the items.
     </p>
-    
+
     <p class='margin-sides-10'>
       The count in inventory is count_on_hand minus count_pending_to_customer. <br/>
       The count in stock must be above the minimum inventory.
@@ -29,9 +34,9 @@
       variants model)<br/>
       So you need to have an inventory above the minimum out of stock quantity.
       The normal flow to get inventory into the system is through a purchase
-      orders. 
+      orders.
     </p>
-    
+
   </div>
 
 </div>

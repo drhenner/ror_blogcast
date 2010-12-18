@@ -6,16 +6,21 @@
   <%= render :partial => 'shared/footer' %>
 <% end %>
 
-<%= link_to image_tag('logo-name-sm.png', :style => 'width:550px;', :alt => 'Rails Ecommerce, built to scale.'),  "http://github.com/drhenner/ror_ecommerce" -%>
+<div class='main-docs white-board logo2'>
+  <%= link_to image_tag('logo-e.png',
+                        :class => 'prepend-3',
+                        :alt => 'Rails Ecommerce, built to scale.'),
+              "http://github.com/drhenner/ror_ecommerce" -%>
+</div>
 
 <div class='main-docs white-board'>
-  
+
   <div class='' style='display:block;'>
     <h3>Cart History</h3>
     <p class='margin-sides-10'>
       The cart history is a huge feature for all the marketing folks in an organization.  Whenever a variant is added to the cart it never leaves that cart.  Instead the cart_items have items that change state.  This means you know your what your customers are adding to their cart.  So now you can do simple searches to determine what marketing campaigns might work best for customers.
     </p>
-    
+
     <p class='margin-sides-10'>
       What this also means is you need to archive the cart after it gets old.  This could also be a perfect candidate to a no-sql solution.
     </p>

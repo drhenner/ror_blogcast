@@ -1,39 +1,50 @@
-<% content_for :menu do -%>
-  <%= render :partial => 'shared/menu' %>
-<% end %>
 
-<% content_for :footer do -%>
-  <%= render :partial => 'shared/footer' %>
-<% end %>
+<div id='content'>
+  <h1 class='logo2'>Ruby on Rails RoR ecommerce</h1>
+  <div class='tagline'>
+    <em>e-commerce made easy</em>
+  </div>
 
-<div class='main-docs gray-board'>
-  <%= link_to image_tag('logo-name-sm.png', :style => 'width:550px;', :alt => 'Ruby on Rails E-commerce, built to scale.'),  "http://github.com/drhenner/ror_ecommerce" -%>
-  <div class=' column' style='display:block;'>
-    <p class=' description'>
-      RoR Ecommerce is a complete ecommerce platform written completely in Rails 3, and built to scale.
-    </p>
-    <p class=' info'>
-      The goal of this project is to create the most scalable, most developer friendly and most extendable e-commerce platform for Ruby on Rails.  This project is current looking for a core open source team to help build it into the future.
-    </p>
-    <p class=' info'>
+  <div class='description'>
+    <p>
+      <span style="color:#8b1d1d;">RoR Ecommerce is a complete ecommerce platform written from scratch in Rails 3, and built to scale.</span>
+      <br/>
+
+      The goal of this project is to create the most scalable, most developer friendly and most extendable e-commerce platform for Ruby on Rails.  This project is current looking for open source contributors to help build it into the future.<br/>
+
+    <br/><br/>
       Needs:
       <ol>
         <li> Base functionality (CIM interface). </li>
         <li> Rack app to extend the cart. </li>
         <li> Rack app to extend the product details page. </li>
         <li> Rack app to create a blog within this project. </li>
-        <li> There are an extended number of Rack apps yet to be thought of. </li>
-        <li> Documentation </li>
-        <li> Controller Test </li>
+        <li> Rack apps yet to be thought of... </li>
+        <li> Documentation (YARD doc) </li>
+        <li> Controller Tests </li>
       </ol>
 
     </p>
-
-    <p class=' info'>
-      Please contact David Henner for more information.  drhenner@yahoo.com
-    </p>
   </div>
-
-  <div class=' clear'></div>
-  <div class=''>Rails E-commerce, built to scale.</div>
+  <ol id='next-steps'>
+    <li class='home-page'>
+      <%= link_to 'Home', root_path %>
+    </li>
+    <li class='download'>
+      <%= link_to 'Docs', docs_installation_path %>
+    </li>
+    <li class='info'>
+      <%= link_to 'Info', info_about_path %>
+    </li>
+    <li class='support'>
+      <%= link_to 'About', info_about_ror_path %>
+    </li>
+    <li class='get-video'>
+      <a href='http://vimeo.com/17448146'>Videos</a>
+    </li>
+    <li class='get-involved'>
+      <a href='http://github.com/drhenner/ror_ecommerce'>Git Hub</a>
+    </li>
+  </ol>
 </div>
+<div id='layout_footer'>Rails E-commerce, built to scale.</div>

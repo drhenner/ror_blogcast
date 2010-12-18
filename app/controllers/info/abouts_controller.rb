@@ -1,5 +1,5 @@
 class Info::AboutsController < ApplicationController
-
+  layout 'welcome'
   # GET /info/about
   def show
 
