@@ -1,0 +1,6 @@
+<% if post.comments.count == 0 %>
+<%= link_to "Post a comment", post_path(post, :anchor => "comments") %>
+<% else %>
+<%= link_to pluralize(post.comments.count, "comment"), post_path(post, :anchor => "comments") %> 
+Latest by <%= post.comments.all.last.name %>
+<% end %>

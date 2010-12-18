@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html><head>
+<title>Blogcast</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<meta name="author" content="Blogcast"/>
+<meta name="description" content="Blogcast is a better way to blog."/>
+<meta name="robots" content="noarchive"/>
+<meta name="robots" content="noindex, nofollow"/>
+<%= stylesheet_link_tag "login" %>
+</head><body>
+
+<div id="page">
+
+<div id="header">
+	<div id="site-title"><%= link_to "Blogcast", root_url %></div>
+	<div id="site-subtitle">Blogcast is a better way to blog.</div>
+</div><!--header-->
+
+<hr class="hidden"/>
+
+<div id="main">
+<div id="content">
+
+<div id="login">
+<h1>Please Login</h1>
+<%= form_for @user_session, :as => :user_session, :url => { :action => "create" } do |f| %>
+	<table>
+		<tbody>
+			<tr>
+				<td class="label"><%= f.label :login, "Username" %></td>
+				<td class="field" colspan="2"><%= f.text_field :login, :class => "textbox" %></td>
+			</tr>
+			<tr>
+				<td class="label"><%= f.label :password %></td>
+				<td class="field" colspan="2"><%= f.password_field :password, :class => "textbox" %></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td class="buttons"><%= f.submit "Login" %></td>
+			</tr>
+		</tbody>
+	</table>
+<% end %>
+</div><!--login-->
+  
+</div><!--content-->
+</div><!--main-->
+
+<hr class="hidden"/>
+
+</div><!--page-->
+</body></html>

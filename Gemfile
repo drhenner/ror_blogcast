@@ -17,6 +17,10 @@ gem 'RedCloth'#, :git => 'git://github.com/jgarber/redcloth.git'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'mysql2'
+#gem 'sqlite3-ruby', :require => 'sqlite3'
+
+gem 'bluecloth'
+gem 'rakismet'
 
 
 # Bundle gems for the local environment. Make sure to

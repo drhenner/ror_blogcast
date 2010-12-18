@@ -1,0 +1,69 @@
+<% content_for :title do %>
+Edit User
+<% end %>
+
+<% content_for :robots do %> 
+<meta name="robots" content="noarchive"/>
+<meta name="robots" content="noindex, nofollow"/>
+<% end %>
+
+<h2>Manage Blog Users</h2>
+
+<h3>Edit the persona for this user</h3>
+
+<div class="posts archives users">
+
+<div class="comments_canvas">
+	<div id="post_a_comment">
+	<h2></h2>
+	<%= form_for(@user) do |f| %>
+	<div id="edit_user_canvas">
+		<fieldset>
+			<div class="form-field">
+				<%= f.label :name %>
+				<%= f.text_field :name, :size => "40" %>
+			</div>
+			
+			<div class="form-field">
+				<%= f.label :initials %>
+				<%= f.text_field :initials, :size => "40" %> 
+			</div>
+			
+			<div class="form-field">
+				<%= f.label :login %>
+				<%= f.text_field :login, :size => "40" %> 
+			</div>
+			
+			<div class="form-field">
+				<%= f.label :email %>
+				<%= f.text_field :email, :size => "40" %> 
+			</div>
+			
+			<div class="form-field">
+				<%= f.label :password, f.object.new_record? ? nil : "Change Password" %>
+				<%= f.password_field :password, :size => "40" %> 
+			</div>
+			
+			<div class="form-field">
+				<%= f.label :password_confirmation, "Password Confirmation" %>
+				<%= f.password_field :password_confirmation, :size => "40" %> 
+			</div>
+		</fieldset>
+		
+		<fieldset>
+			<div class="form-submit">
+				<%= f.submit "Update this user" %>
+			</div>
+		</fieldset>
+	</div><!-- edit_user_canvas -->
+	<% end %>
+	</div><!-- post_a_comment -->
+</div><!-- comments_canvas -->
+
+</div><!-- users -->
+
+<% content_for :sidebar do %>
+<div class="sidebar">
+
+</div><!--sidebar-->
+<% end %>

@@ -1,0 +1,39 @@
+<% content_for :title do %> 
+Drafts
+<% end %>
+
+<% content_for :robots do %> 
+<meta name="robots" content="noarchive"/>
+<meta name="robots" content="noindex, nofollow"/>
+<% end %>
+
+<% content_for :modstyles do %> 
+<%= stylesheet_link_tag "archives" %>
+<% end %>
+
+<% if @drafts.count == 0 %>
+
+<div class="archives">
+	<h2>No Drafts for Review</h2>
+	<ul>
+		<li>Write a post using the <%= link_to "Create Post", new_post_path %> option above.</li>
+	</ul>
+</div>
+
+<% else %>
+
+<div class="archives drafts">
+	<h2>Drafts for Review</h2>
+	<ul>
+	<% for draft in @drafts %>
+		<li><%= link_to draft.title, edit_draft_path(draft) %>
+		
+			<%= link_to draft_path(draft), :confirm => "Are you sure you want to delete this draft?", :method => :delete do %>
+			<%= image_tag "delete.png", :alt => "delete draft", :title => "delete draft" %>
+			<% end %>
+		</li>
+	<% end %>
+	</ul>
+</div>
+
+<% end %>

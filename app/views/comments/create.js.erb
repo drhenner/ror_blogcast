@@ -1,0 +1,10 @@
+jQuery(document).ready(function($) {
+	$(".post p.meta").html("<%= escape_javascript(render :partial => "posts/meta", :locals => { :post => @post }) %>");
+	$(".comments_canvas h2").removeClass("plain");
+	$(".comments_canvas h2.comment_count").html("<%= pluralize(@post.comments.count, "comment") %> so far");
+	$(".comments").append("<%= escape_javascript(render :partial => @comment, :locals => { :post => @post }) %>");
+	$("#comment_<%= @comment.id %>").hide().fadeIn(1500);
+	
+	$("#comment_preview_canvas").hide();
+	$("#new_comment_canvas").show();
+});

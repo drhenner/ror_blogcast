@@ -1,0 +1,51 @@
+<% content_for :title do %>Blogcast<% end %>
+
+<% content_for :description do %> <% end %>
+
+<% if current_user %>
+<% content_for :robots do %>
+<meta name="robots" content="noarchive"/>
+<meta name="robots" content="noindex, nofollow"/>
+<% end %>
+<% end %>
+
+<% if @posts.count == 0 %>
+
+<% if current_user %>
+<div class="post">
+  <h2>Crack those knuckles - lets get to work!</h2>
+  <p class="meta">Write your first post using the <%= link_to "Create Post", :controller => "posts", :action => "new" %> option above.</p>
+</div>
+<% else %>
+<div class="post">
+  <h2>Welcome to RoR-e's Blog!</h2>
+  <p class="meta">Seriously, get ready for some serious blogging!</p>
+</div>
+<% end %>
+
+<% else %>
+
+<% for post in @posts %>
+<div class="post">
+  <h2><%= link_to post.title, post %>
+  <span class="nobreak">
+    <span class="author"><%= post.author %></span>
+    <span class="date"><%= post.posted_at.strftime("%b %d") %></span>
+  </span>
+  </h2>
+
+  <p class="meta">
+    <%= render :partial => "meta", :locals => { :post => post } %>
+  </p>
+
+  <div class="entry">
+    <%= post.content.html_safe %>
+  </div>
+</div>
+<% end %>
+
+<% end %>
+
+<% content_for :sidebar do %>
+<%= render :partial => "layouts/sidebar" %>
+<% end %>

@@ -1,0 +1,108 @@
+<% content_for :title do %> 
+Spam Grill
+<% end %>
+
+<% content_for :robots do %> 
+<meta name="robots" content="noarchive"/>
+<meta name="robots" content="noindex, nofollow"/>
+<% end %>
+
+<h2>Spam Pit Ultra Deluxe</h2>
+
+<% if @post %>
+<h3><%= @post.title %></h3>
+
+<div class="post">
+<div class="comments_canvas">
+	<h2 class="comment_count"><%= pluralize(@post.spams.count, "spam") %> on this grill rack
+	<% if @post.spams.count > 0 %>
+	<% link_to incinerate_post_spams_path(@post), :confirm => "Are you sure you want to delete all spam for this post?", :method => :delete do %>
+	<%= image_tag "fire_big.png", :alt => "incinerate all spams on this post", :title => "incinerate all spams on this post" %>
+	<% end %>
+	<% end %>
+	</h2>
+	
+	<div id="comments">
+	<% for spam in @post.spams.all %>
+	<div id="spam_<%= spam.id %>" class="comment">
+		<h3>
+			<span class="name">
+			<% if spam.website == "" %>
+				<%= spam.name %>
+			<% else %>
+				<%= link_to spam.name, spam.website, :rel => "nofollow" %>
+			<% end %>
+			</span>
+			<span class="date"><%= spam.created_at.strftime("%d %b %y") %></span>
+			<span class="aux">
+				<% link_to [@post, spam], :confirm => "Are you sure you want to delete this spam?", :method => :delete do %>
+				<%= image_tag "delete.png", :alt => "delete spam", :title => "delete spam" %>
+				<% end %>
+
+
+				<% link_to mark_as_ham_post_spam_path(@post, spam), :confirm => "Are you sure you want to mark this spam as ham?", :method => :delete do %>
+				<%= image_tag "wireless.png", :alt => "mark as ham", :title => "mark as ham" %>
+				<% end %>
+			</span>				
+		</h3>				
+		<div class="comment-body"><%=sanitize(spam.content,:tags => %w(a strong em blockquote cite code), :attributes => %w(href))%></div>
+	</div><!--spam-->
+	<% end %>
+	</div><!--comments-->
+</div><!--comments_canvas-->
+</div><!--post-->
+<% else %>
+
+<%= link_to incinerate_post_spams_path("0-spam-barbecue"), :confirm => "Are you sure you want to delete all spam for this blog?", :method => :delete do %>
+<%= image_tag "grill.png", :id => "spam_grill", :alt => "incinerate all spams everywhere", :title => "incinerate all spams everywhere" %>
+<% end %>
+
+<% for post in @posts %>
+<% if post.spams.count > 0 %>
+
+<h3><%= post.title %></h3>
+
+<div class="post">
+<div class="comments_canvas">
+	<h2 class="comment_count"><%= pluralize(post.spams.count, "spam") %> on this grill rack
+	<% if post.spams.count > 0 %>
+	<%= link_to incinerate_post_spams_path(post), :confirm => "Are you sure you want to delete all spam for this post?", :method => :delete do %>
+	<%= image_tag "fire_big.png", :alt => "incinerate all spams on this post", :title => "incinerate all spams on this post" %>
+	<% end %>
+	<% end %>
+	</h2>
+	
+	<div class="comments">
+	<% for spam in post.spams.all %>
+	<div id="spam_<%= spam.id %>" class="comment">
+		<h3>
+			<span class="name">
+			<% if spam.website == "" %>
+				<%= spam.name %>
+			<% else %>
+				<%= link_to spam.name, spam.website, :rel => "nofollow" %>
+			<% end %>
+			</span>
+			<span class="date"><%= spam.created_at.strftime("%d %b %y") %></span>
+			<span class="aux">
+				<%= link_to [post, spam], :confirm => "Are you sure you want to delete this spam?", :method => :delete do %>
+				<%= image_tag "delete.png", :alt => "delete spam", :title => "delete spam" %>
+				<% end %>
+
+
+				<%= link_to mark_as_ham_post_spam_path(post, spam), :confirm => "Are you sure you want to mark this spam as ham?", :method => :delete do %>
+				<%= image_tag "wireless.png", :alt => "mark as ham", :title => "mark as ham" %>
+				<% end %>
+			</span>				
+		</h3>				
+		<div class="comment-body"><%=sanitize(spam.content,:tags => %w(a strong em blockquote cite code), :attributes => %w(href))%></div>
+	</div><!--spam-->
+	<% end %>
+	</div><!--comments-->
+</div><!--comments_canvas-->
+</div><!--post-->
+<% end %>
+<% end %>
+
+
+<% end %>

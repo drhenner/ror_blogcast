@@ -1,0 +1,58 @@
+<% content_for :title do %>Archives<% end %>
+
+<% content_for :description do %>Welcome to the Blogcast Archive.<% end %>
+
+<% if current_user %>
+<% content_for :robots do %>
+<meta name="robots" content="noarchive"/>
+<meta name="robots" content="noindex, nofollow"/>
+<% end %>
+<% end %>
+
+<% content_for :modstyles do %> 
+<%= stylesheet_link_tag "archives" %>
+<% end %>
+
+<% if @posts.count == 0 %>
+
+<% if current_user %>
+<div class="archives">
+	<h2>Blogcast Archive</h2>
+	<ul>
+		<li>Sorry, no posts to archive. Write your first post using the <%= link_to "Create Post", new_post_path %> option above.</li>
+	</ul>
+</div>
+<% else %>
+<div class="archives">
+	<h2>Seventh Octave Archive</h2>
+	<ul>
+		<li>Sorry, no posts to archive. But, best be sure you got some goodness coming!</li>
+	</ul>
+</div>
+<% end %>
+
+<% else %>
+
+<div class="archives">
+	<h2>Blogcast Archive</h2>
+	
+	<% @post_months.sort.reverse.each do |month, posts| %>
+	<h3><%= month.strftime("%B %Y") %></h3>
+	<ul>
+		<% for post in posts %>
+		<li>
+			<%= link_to post.title, post_path(post) %>
+			
+			<% if current_user %>
+			<% if post.comments.count > 0 %>
+			<span class="comments"><%= post.comments.count %></span>
+			<span class="latest"><%= post.comments.all.last.created_at.strftime("%b %d %Y") %></span>
+			<% end %>
+			<% end %>
+		</li>
+		<% end %>
+	</ul>
+	<% end %>
+</div>
+
+<% end %>

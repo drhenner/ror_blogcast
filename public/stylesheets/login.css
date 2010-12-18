@@ -1,0 +1,151 @@
+body {
+  background-color: white;
+  color: #0F90A7;
+  font-size: 95%;
+  font-family: georgia;
+  margin: 0;
+  padding: 0;
+}
+
+h3 {
+  font-size: 130%;
+  margin-top: 1.25em;
+  margin-bottom: .5em;
+}
+
+.hidden {
+  display: none;
+}
+
+.clear {
+  font-size: 1px;
+  clear: both;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+/* main layout */
+#header {
+  background-color: #75D9EB;
+  color: white;
+  width: 100%;
+  padding-top: 1px;
+  padding-bottom: 20px;
+}
+
+#header a, #header a:visited {
+  background-color: inherit;
+  color: white;
+  text-decoration: none;
+}
+
+#header a:hover, #header a:visited:hover {
+  text-decoration: underline;
+}
+
+#site-title {
+  font-size: 150%;
+  font-weight: bold;
+  margin-top: 19px;
+  margin-left: 20px;
+}
+
+#site-subtitle {
+  color: #0F90A7;
+  font-size: 90%;
+  font-style: italic;
+  margin-left: 20px;
+}
+
+#main {
+  float: left;
+  width: 100%;
+}
+
+#content {
+  font-size: 95%;
+  padding: 20px;
+}
+
+#footer {
+  color: #999;
+  background-color: #f7f7f7;
+  border-top: 1px solid #eaeaea;
+  font-size: 80%;
+  float: left;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  width: 100%;
+}
+
+#footer p {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+/* form elements */
+#content .buttons {
+  font-size: 80%;
+  margin-top: 2.5em;
+}
+#content .button {
+  font-size: 150%;
+}
+
+/*Login Box Styling*/
+#content {
+	text-align: center; 
+}
+
+#content #login {
+	background-color: #75D9EB;
+	border: 5px solid #D3F6FC;
+	text-align: left;
+	margin: 2em;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 5px 20px;
+	padding-right: 22px;
+	position: relative;
+	width: 24.5em; 
+	color: #181818;
+}
+
+#content #login h1 {
+	font-size: 140%;
+	margin: 0;
+	margin-top: 13px; 
+}
+
+#content #login table {
+	width: 100%;
+	margin: 15px 0 10px 0; 
+}
+
+#content #login table td {
+	text-align: left;
+	padding: 6px 0; 
+}
+
+#content #login table td.label {
+	width: 6em; 
+}
+
+#content #login table td.field input.textbox {
+	font-size: 100%;
+	width: 98%; 
+}
+
+#content #login table td.checkbox {
+	font-size: 85%; 
+}
+
+#content #login table td.buttons {
+	text-align: right; 
+}
+
+#content #login table td.buttons input {
+	font-size: 140%; 
+}

@@ -1,0 +1,7 @@
+jQuery(document).ready(function($) {
+	$("#comment_preview").empty();
+	$("#comment_preview").append("<%= escape_javascript(render :partial => @comment, :locals => { :post => @post }) %>");
+	
+	$("#new_comment_canvas").hide();
+	$("#comment_preview_canvas").show();
+});

@@ -44,5 +44,14 @@ module DocEcommerce
 
     # Configure sensitive parameters which will be filtered from the log file.
     config.filter_parameters += [:password, :password_confirmation]
+    
+    
+    #Rakismet
+    #Akismet (http://akismet.com/) is a collaborative spam filtering service. 
+    #Rakismet is easy Akismet integration with Rails and rack apps. 
+    #TypePad's AntiSpam service and generic Akismet endpoints are supported.
+    config.rakismet.key  = 'Your Akismet Key'
+    config.rakismet.url  = 'http://example-domain.com/blog'
+    config.rakismet.host = 'rest.akismet.com'
   end
 end

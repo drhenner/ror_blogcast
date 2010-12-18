@@ -1,0 +1,59 @@
+<% content_for :title do %> 
+Edit Draft
+<% end %>
+
+<% content_for :robots do %> 
+<meta name="robots" content="noarchive"/>
+<meta name="robots" content="noindex, nofollow"/>
+<% end %>
+
+<% content_for :modstyles do %> 
+<%= stylesheet_link_tag "modstyles" %>
+<% end %>
+
+<% content_for :modjs do %>
+<%= javascript_include_tag "showdown" %>
+<%= javascript_include_tag "wmd" %>
+<%= javascript_include_tag "textarearesizer" %>
+<%= javascript_include_tag "elastic" %>
+<% end %>
+
+<div class="post">
+	
+	<h2><%= link_to @draft.title, edit_draft_path, :class => "article" %>
+	<span class="nobreak">
+		<span class="author"><%= @draft.author %></span>
+		<span class="date"><%= @draft.created_at.strftime("%b %d") %></span>
+	</span>
+	</h2>
+	
+	<p class="meta">
+		<a href="#">Post a comment</a>
+	</p>
+		
+	<div id="wmd-preview" class="entry"></div>
+</div><!--post-->
+
+<% content_for :sidebar do %> 
+<div class="sidebar">
+	<%= form_for(@draft) do |f| %>
+	<div id="title-container" class="draft-title-container">
+		<%= f.text_field :title %> 
+		<p>/1234-title-me-wisely-brave-citizen</p>
+	</div>
+	
+	<div id="wmd-container">
+	<div id="wmd-button-bar"></div>
+
+	<%= f.text_area :markdown, :id => "wmd-input", :cols => "92", :rows => "15" %>
+	
+	</div><!--wmd-container-->
+	
+	<ul class="options form-submit">
+		<li><%= f.submit "Share your post with the world", :id => "post_submit", :name => "save_post", :confirm => "Are you sure you want to share this post with the world?" %></li>
+		<li class="right"><%= f.submit "Update draft", :name => "save_draft" %></li>
+	</ul>
+	<% end %>
+</div><!--sidebar-->
+
+<% end %>

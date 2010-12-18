@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<title><%= yield :title %></title>
+<meta name="author" content="Blogcast"/>
+<meta name="description" content="<%= yield :description %>"/>
+<%= csrf_meta_tag %>
+<%= yield :robots %>
+<%= stylesheet_link_tag "blog" %> <%= yield :modstyles %>
+<!--<link href="images/favicon.ico" rel="Shortcut Icon" type="image/x-icon"/>-->
+<%= auto_discovery_link_tag(:rss, "#") %>
+<% if Rails.env.production? %>
+<%= javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js" %>
+<% else %>
+<%= javascript_include_tag "jquery" %>
+<% end %>
+<%= javascript_include_tag "rails" %>
+<script type="text/javascript">jQuery.noConflict();</script> <%= yield :modjs %>
+<%= javascript_include_tag "highlight" %>
+<%= javascript_include_tag "blog" %>
+</head><body>
+
+<% if current_user %>
+<div class="adminbar">
+<ul>
+	<li><%= link_to image_tag("stock_spam.png"), post_spams_path(@current_action == "show" && @current_controller =="posts" ? @post : "0-spam-barbecue"), :class => "spam" %></li>
+	<li><%= link_to "Top Posts", posts_path %></li>
+	<li><%= link_to "Create Post", new_post_path %></li>
+	<li><%= link_to "Drafts", drafts_path %></li>
+	<%= yield :adminbar_left %>
+	
+	<li class="right"><%= link_to "Logout", logout_path, :method => :delete, :class => "delete" %></li>
+	<li class="right"><%= link_to "Users", users_path %></li>
+	<%= yield :adminbar_right %>
+	<li class="right"><em>Welcome, <%= current_user.name %></em></li>
+</ul>
+</div><!--adminbar-->
+<% end %>
+
+<div class="header">
+<% if !current_user %>
+<h1>Blogcast</h1>
+<% end %>
+</div><!-- header -->
+
+<div class="wrapper">
+<div class="content">
+
+<%= yield %>
+
+</div><!--content-->
+
+<%= yield :sidebar %>
+
+<br style="clear: both; " /><br /><br />
+</div><!--wrapper-->
+
+<div class="footer">
+	<p>
+		Content copyright © 2010 <a href="#">Company, LLC</a>.
+		<span>Powered by <a href="http://techoctave.com/blogcast">Blogcast</a></span>
+	</p>
+</div><!-- footer -->
+<% if Rails.env.production? && !current_user %>
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'Your Google Analytics Account']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+<% end %>
+</body></html>

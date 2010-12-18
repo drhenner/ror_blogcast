@@ -1,0 +1,147 @@
+/*-----------------------------------------------------------
+						RESET
+-----------------------------------------------------------*/
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	border: 0;
+	padding: 0;
+	outline: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background-color: transparent;
+}
+
+body {
+	line-height: 1;
+}
+
+/*-----------------------------------------------------------
+		TYPOGRAPHY - GLOBAL
+-----------------------------------------------------------*/
+
+body {
+	margin: 0;
+	background-color: #FFF;
+	color: #666;
+	font-family: 'Helvetica Neue', Arial, Helvetica, sans-serif;
+}
+
+a:link    { color: #333; }
+a:visited { color: #333; }
+a:hover,
+a:active  { color: #000; }
+
+h1 {
+	font-size: 1.5em;
+}
+
+h2 {
+	margin: 1em 0 1.5em;
+	color: #AAA;
+	font-size: 1.3em;
+}
+
+h3 {
+	margin: 1.5em 0 .5em;
+	font-size: 1.1em;
+}
+
+p {
+	margin: .2em 0 1em;
+}
+
+/*-----------------------------------------------------------
+					LAYOUT
+-----------------------------------------------------------*/
+
+body {
+	text-align: center;
+	min-width: 860px;
+}
+
+.wrapper,
+.header {
+	width: 860px;
+	margin: 0 auto;
+	text-align: left;
+}
+
+.content {
+	float: left;
+	width: 520px;
+}
+
+.header {
+	margin-bottom: 15px;
+
+	text-indent: -10000px;
+	background-color: #75D9EB;
+	font-size: 0.3em;
+}
+
+/*-----------------------------------------------------------
+				ERROR PAGES
+-----------------------------------------------------------*/
+
+.server_error body {
+	text-align: center;
+	min-width: 1100px;
+}
+
+.server_error .wrapper,
+.server_error .footer {
+	width: 860px;
+	margin: 0 auto;
+	text-align: left;
+}
+
+.server_error .content {
+	float: left;
+	width: 860px;
+}
+
+.server_error h2, 
+.server_error h3, 
+.server_error h4, 
+.server_error p {
+	font-family: Georgia;
+	text-align: center;
+}
+
+.server_error h2 {
+	text-indent: -10000px;
+	background: url("../images/koala.png") no-repeat;
+	width: 256px;
+	height: 200px;
+	margin: 0 auto;
+	margin-bottom: 0;
+}
+
+.server_error h3 {
+	color: #75D9EB;
+	font-size: 5.31em;
+	font-weight: normal;
+	margin-top: 50px;	
+}
+
+.server_error h4, 
+.server_error p {
+	color: #111111;	
+}
+
+.server_error h4 {
+	font-size: 1.75em;	
+}
+
+.server_error p {
+	font-size: 1.31em;
+	margin-top: 12px;	
+}
+
+.server_error a {
+	color: #00ADEC;
+	border-bottom: 1px solid #75D9EB;
+	font-weight: bold;
+	text-decoration: none;	
+}

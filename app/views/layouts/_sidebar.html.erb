@@ -1,0 +1,18 @@
+<div class="sidebar">
+  <div class="block-content" id="intro">
+    <h2><%= link_to "RoR-e blog.", posts_path %></h2>
+    <p>RoR-e. This blog contains information we find interesting in the ruby community.  We write about Ruby, Rails and occasional rant. </p>
+  </div><!--block-content-->
+
+  <div class="block-content"  id="search">
+    <%= link_to "Archive", archives_path %>
+
+    <form method="get" action="http://www.google.com/search">
+      <fieldset>
+        <input name="q" type="text"/>
+        <input name="sitesearch" value="http://www.ror-e.com/blog" type="hidden"/>
+      </fieldset>
+    </form>
+  </div><!--block-content-->
+
+</div><!--sidebar-->

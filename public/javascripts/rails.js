@@ -19,7 +19,14 @@ jQuery(function ($) {
         },
 
         /**
-         * Handles execution of remote calls firing overridable events along the way
+         * Handles execution of remote calls. Provides following callbacks:
+         *
+         * - ajax:before   - is execute before the whole thing begings
+         * - ajax:loading  - is executed before firing ajax call
+         * - ajax:success  - is executed when status is success
+         * - ajax:complete - is execute when status is complete
+         * - ajax:failure  - is execute in case of error
+         * - ajax:after    - is execute every single time at the end of ajax call 
          */
         callRemote: function () {
             var el      = this,
@@ -63,7 +70,7 @@ jQuery(function ($) {
     var jqueryVersion = $().jquery;
 
     if ( (jqueryVersion === '1.4') || (jqueryVersion === '1.4.1') || (jqueryVersion === '1.4.2')){
-      $('a[data-confirm],input[data-confirm]').live('click', function () {
+      $('a[data-confirm], button[data-confirm], input[data-confirm]').live('click', function () {
           var el = $(this);
           if (el.triggerAndReturn('confirm')) {
               if (!confirm(el.attr('data-confirm'))) {
@@ -72,7 +79,7 @@ jQuery(function ($) {
           }
       });
     } else {
-      $('body').delegate('a[data-confirm],input[data-confirm]', 'click', function () {
+      $('body').delegate('a[data-confirm], button[data-confirm], input[data-confirm]', 'click', function () {
           var el = $(this);
           if (el.triggerAndReturn('confirm')) {
               if (!confirm(el.attr('data-confirm'))) {
@@ -119,9 +126,9 @@ jQuery(function ($) {
     /**
      * disable-with handlers
      */
-    var disable_with_input_selector           = 'input[data-disable-with]';
-    var disable_with_form_remote_selector     = 'form[data-remote]:has('       + disable_with_input_selector + ')';
-    var disable_with_form_not_remote_selector = 'form:not([data-remote]):has(' + disable_with_input_selector + ')';
+    var disable_with_input_selector           = 'input[data-disable-with]',
+        disable_with_form_remote_selector     = 'form[data-remote]:has('       + disable_with_input_selector + ')',
+        disable_with_form_not_remote_selector = 'form:not([data-remote]):has(' + disable_with_input_selector + ')';
 
     var disable_with_input_function = function () {
         $(this).find(disable_with_input_selector).each(function () {
