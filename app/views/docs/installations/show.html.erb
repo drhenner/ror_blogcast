@@ -9,7 +9,7 @@
   <%= link_to image_tag('logo-e.png',
                         :class => 'prepend-3',
                         :alt => 'Rails Ecommerce, built to scale.'),
-              "http://github.com/drhenner/ror_ecommerce" -%>
+              "http://github.com/drhenner/ror_ecommerce", 'data-popup' => true -%>
 </div>
 <div class='main-docs white-board'>
 
@@ -52,8 +52,8 @@
     <hr/>
 
     <p>
-      Time to start <%= link_to 'Sunspot / Solr', 'http://outoftime.github.com/sunspot/docs/index.html'%> and
-      <%= link_to 'memcache', 'http://oldwiki.rubyonrails.org/rails/pages/MemCached' %> (yep you better install them)
+      Time to start <%= link_to 'Sunspot / Solr', 'http://outoftime.github.com/sunspot/docs/index.html', 'data-popup' => true %> and
+      <%= link_to 'memcache', 'http://oldwiki.rubyonrails.org/rails/pages/MemCached', 'data-popup' => true %> (yep you better install them)
       <div class='install'>rake sunspot:solr:start</div>
       If you decide not to use solr, go into product.rb and delete the following:
       <pre class='CodeRay' ><%=raw textilize(
@@ -65,7 +65,7 @@
       end </code>") %></pre>
 
       Take a look at setting up solr <br/>
-      <%= link_to 'Solr in 5 minutes', 'http://github.com/outoftime/sunspot/wiki/adding-sunspot-search-to-rails-in-5-minutes-or-less'%>
+      <%= link_to 'Solr in 5 minutes', 'http://github.com/outoftime/sunspot/wiki/adding-sunspot-search-to-rails-in-5-minutes-or-less', 'data-popup' => true%>
 
 
     </p>
