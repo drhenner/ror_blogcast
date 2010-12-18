@@ -1,7 +1,7 @@
 source 'http://rubygems.org'
 source "http://gems.github.com"
 
-gem 'rails', '3.0.1'
+gem 'rails', '3.0.3'
 gem 'jquery-rails'
 gem "compass", ">= 0.10.5"
 gem 'haml',  ">= 3.0.13"
@@ -13,27 +13,11 @@ gem 'cancan'#, '1.3.2'
 gem 'coderay'#, :git => 'git://github.com/Flameeyes/redcloth.git'#, :branch => 'ruby1.9.2'
 gem 'RedCloth'#, :git => 'git://github.com/jgarber/redcloth.git'
 
-#, :git => 'git://github.com/jgarber/redcloth.git', :branch => 'ruby1.9.2'
-
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'mysql2'
 
-# Use unicorn as the web server
-# gem 'unicorn'
-
-# Deploy with Capistrano
-# gem 'capistrano'
-
-# To use debugger
-# gem 'ruby-debug'
-
-# Bundle the extra gems:
-# gem 'bj'
-# gem 'nokogiri'
-# gem 'sqlite3-ruby', :require => 'sqlite3'
-# gem 'aws-s3', :require => 'aws/s3'
 
 # Bundle gems for the local environment. Make sure to
 # put test-only gems in this group so their generators
@@ -43,7 +27,7 @@ gem 'mysql2'
 # end
 
 
-group :development do 
+group :development do
   gem 'awesome_print'
   gem "autotest-rails-pure"
 
@@ -58,16 +42,16 @@ group :test do
   gem 'factory_girl_rails'
   gem 'mocha', :require => false
   gem 'rspec-rails-mocha'
-  
+
   gem "shoulda"
-  
+
   gem "rspec-rails",  ">= 2.0.0"
   gem "rspec",        ">=  2.0.0"
-  
+
   gem "rspec-core",         ">=  2.0.0"
   gem "rspec-expectations", ">=  2.0.0"
   gem "rspec-mocks",        ">=  2.0.0"
-  
+
   gem "faker"
   gem "autotest"
   gem "autotest-rails-pure"
