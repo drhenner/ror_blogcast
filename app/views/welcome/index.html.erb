@@ -15,6 +15,9 @@
     </p>
   </div>
   <ol id='next-steps'>
+    <li class='home-page'>
+      <%= link_to 'Home', root_path %>
+    </li>
     <li class='download'>
       <%= link_to 'Docs', docs_installation_path %>
     </li>
@@ -25,10 +28,10 @@
       <%= link_to 'About', info_about_ror_path %>
     </li>
     <li class='get-video'>
-      <a href='http://vimeo.com/17448146' 'data-popup' >Videos</a>
+       <%= link_to 'Videos', 'http://vimeo.com/17448146', 'data-popup' => true %>
     </li>
     <li class='get-involved'>
-      <a href='http://github.com/drhenner/ror_ecommerce' 'data-popup'>Git Hub</a>
+      <%= link_to 'Git Hub', 'http://github.com/drhenner/ror_ecommerce', 'data-popup' => true %>
     </li>
   </ol>
 </div>
