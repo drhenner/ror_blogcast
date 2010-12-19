@@ -10,13 +10,14 @@
   <%= stylesheet_link_tag 'screen.css', :media => 'screen, projection' %>
   <%= stylesheet_link_tag 'print.css', :media => 'print' %>
   <%= stylesheet_link_tag 'main.css' %>
+  <%= stylesheet_link_tag "side_menu" %>
   <!--[if lt IE 8]
     <%= stylesheet_link_tag 'ie.css', :media => 'screen, projection'%>
   <![endif]-->
   <%= javascript_include_tag 'jquery.min', 'rails', 'jquery-ui-1.8.5.custom.min','application' %>
   <%= yield :head %>
 </head>
-<body class='page_wrapper'>
+<body class='page_wrapper' id='home'>
   <div id='main-wrapper' class="bp container">
     <% if  yield :menu %>
       <div id='menu'>
@@ -35,12 +36,12 @@
     </div>
 
     <% if  yield :right_panel %>
-      <div id='right-panel' class='span-7 rounded-main-wrapper last'>
+      <div id='right-panel' class='span-7 last'>
         <%= yield :right_panel %>
       </div>
     <% end %>
     <% if  yield :footer %>
-      <div id='footer'>
+      <div id='doc-footer'>
         <%= yield :footer %>
       </div>
     <% end %>

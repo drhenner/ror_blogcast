@@ -1,5 +1,5 @@
 <% content_for :menu do -%>
-  <%= render :partial => 'shared/menu' %>
+  <%#= render :partial => 'shared/menu' %>
 <% end %>
 
 <% content_for :footer do -%>
@@ -68,5 +68,6 @@
 <div class=''>Please use <b>Ruby 1.9.2</b> and enjoy Rails 3.0.</div>
 
 <% content_for :right_panel do -%>
-  <%= render :partial => 'docs/contents'%>
+  <%#= render :partial => 'docs/contents'%>
+  <%= render :partial => '/shared/side_menu2' %>
 <% end %>

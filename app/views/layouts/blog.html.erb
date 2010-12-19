@@ -7,6 +7,7 @@
 <%= csrf_meta_tag %>
 <%= yield :robots %>
 <%= stylesheet_link_tag "blog" %> <%= yield :modstyles %>
+<%= stylesheet_link_tag "side_menu" %>
 <!--<link href="images/favicon.ico" rel="Shortcut Icon" type="image/x-icon"/>-->
 <%= auto_discovery_link_tag(:rss, "#") %>
 <% if Rails.env.production? %>

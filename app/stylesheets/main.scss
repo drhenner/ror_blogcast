@@ -126,9 +126,16 @@
   text-align:left;
 }
 
+#first_inner-side-column {
+  border: 4px solid;
+
+  a {
+    color:#DFDFBF;
+  }
+}
+
 #main-side-column {
   @include rounded(10px);
-  border: 4px solid;
 }
 
 #main-side-column h3 {
@@ -144,9 +151,17 @@
   margin-left:25px;
 }
 
+#doc-footer {
+  text-align:left;
+  display:inline;
+  float:left;
+  margin-left:10px;
+  margin-right:10px;
+  width:940px;
+}
+
 #footer {
   padding-left:20px;
-  text-align:left;
 }
 
 #footer {
@@ -158,7 +173,7 @@
   width:940px;
 }
 .page_wrapper {
-  background:url("../images/background/lrock002.jpg") repeat scroll 0 0;
+  //background:url("../images/background/lrock002.jpg") repeat scroll 0 0;
 }
 
 .white-board {

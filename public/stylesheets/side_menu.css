@@ -1,0 +1,56 @@
+
+body#home ol#next-steps ul.doc-sub-menu {
+  border: 0;
+  padding-top: 7px;
+  padding-left: 0;
+  padding-bottom: 0;
+}
+
+body#home ol#next-steps ul.doc-sub-menu li {
+  color: #BD1D1D;
+  line-height: 8px;
+  font-size: 12px;
+}
+
+body#home ul.doc-sub-menu li a {
+  color: #BD1D1D;
+
+}
+body#home ol#next-steps {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  display: inline;
+  float: left;
+  margin-top: 0.7em;
+  width: 200px;
+  font-family: "Arial Rounded MT Bold";
+  color: #3f3837; }
+  * html body#home ol#next-steps {
+    overflow-x: hidden; }
+  body#home ol#next-steps li {
+    list-style-type: none;
+    margin-left: 0px; }
+  body#home ol#next-steps a {
+    text-decoration: none;
+    color: #3f3837; }
+    body#home ol#next-steps a:hover {
+      text-decoration: underline; }
+    body#home ol#next-steps a:hover {
+      color: #6f6d52; }
+  body#home ol#next-steps li {
+    font-size: 20px;
+    line-height: 20px;
+    margin-bottom: 1em;
+    padding-left: 50px;
+    background-repeat: no-repeat;
+    background-position: left center; }
+  body#home ol#next-steps li.download {
+    background-image: url('/images/icons/download.png?1286797224'); }
+  body#home ol#next-steps li.learn {
+    background-image: url('/images/icons/learn.png?1286797224'); }
+  body#home ol#next-steps li.support {
+    background-image: url('/images/icons/support.png?1286797224'); }
+  body#home ol#next-steps li.get-involved {
+    background-image: url('/images/icons/get_involved.png?1286797224'); }

@@ -143,14 +143,22 @@
 }
 
 /* line 129, ../../app/stylesheets/main.scss */
+#first_inner-side-column {
+  border: 4px solid;
+}
+/* line 132, ../../app/stylesheets/main.scss */
+#first_inner-side-column a {
+  color: #DFDFBF;
+}
+
+/* line 137, ../../app/stylesheets/main.scss */
 #main-side-column {
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
   behavior: url(border-radius.htc);
-  border: 4px solid;
 }
 
-/* line 134, ../../app/stylesheets/main.scss */
+/* line 141, ../../app/stylesheets/main.scss */
 #main-side-column h3 {
   color: #DFDFBF;
   font-size: 21px;
@@ -158,20 +166,29 @@
   margin-left: 25px;
 }
 
-/* line 141, ../../app/stylesheets/main.scss */
+/* line 148, ../../app/stylesheets/main.scss */
 #main-side-column li {
   color: #FFFFFF;
   list-style: disc outside none;
   margin-left: 25px;
 }
 
-/* line 147, ../../app/stylesheets/main.scss */
-#footer {
-  padding-left: 20px;
+/* line 154, ../../app/stylesheets/main.scss */
+#doc-footer {
   text-align: left;
+  display: inline;
+  float: left;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 940px;
 }
 
-/* line 152, ../../app/stylesheets/main.scss */
+/* line 163, ../../app/stylesheets/main.scss */
+#footer {
+  padding-left: 20px;
+}
+
+/* line 167, ../../app/stylesheets/main.scss */
 #footer {
   display: inline;
   float: left;
@@ -181,12 +198,7 @@
   width: 940px;
 }
 
-/* line 160, ../../app/stylesheets/main.scss */
-.page_wrapper {
-  background: url("../images/background/lrock002.jpg") repeat scroll 0 0;
-}
-
-/* line 164, ../../app/stylesheets/main.scss */
+/* line 179, ../../app/stylesheets/main.scss */
 .white-board {
   color: #566;
   background-color: #FFF;
@@ -195,7 +207,7 @@
   behavior: url(border-radius.htc);
 }
 
-/* line 170, ../../app/stylesheets/main.scss */
+/* line 185, ../../app/stylesheets/main.scss */
 .gray-board {
   color: #DFDFBF;
   background-color: #444;
@@ -204,7 +216,7 @@
   behavior: url(border-radius.htc);
 }
 
-/* line 175, ../../app/stylesheets/main.scss */
+/* line 190, ../../app/stylesheets/main.scss */
 .dark-board {
   color: #DFDFBF;
   background-color: #121312;
@@ -213,13 +225,13 @@
   behavior: url(border-radius.htc);
 }
 
-/* line 181, ../../app/stylesheets/main.scss */
+/* line 196, ../../app/stylesheets/main.scss */
 .main-docs {
   padding: 5px;
   margin-bottom: 10px;
 }
 
-/* line 187, ../../app/stylesheets/main.scss */
+/* line 202, ../../app/stylesheets/main.scss */
 .rounded-main-wrapper {
   -moz-border-radius: 11px;
   -webkit-border-radius: 11px;
@@ -227,7 +239,7 @@
   background: url("../images/background/black_60.png") repeat scroll 0 0;
 }
 
-/* line 193, ../../app/stylesheets/main.scss */
+/* line 208, ../../app/stylesheets/main.scss */
 .CodeRay {
   background-color: #232323;
   border: 1px solid black;
@@ -239,116 +251,116 @@
   margin: 12px 0;
 }
 
-/* line 203, ../../app/stylesheets/main.scss */
+/* line 218, ../../app/stylesheets/main.scss */
 .CodeRay pre {
   margin: 0px;
   padding: 0px;
 }
 
-/* line 208, ../../app/stylesheets/main.scss */
+/* line 223, ../../app/stylesheets/main.scss */
 .CodeRay .an {
   color: #E7BE69;
 }
 
 /* html attribute */
-/* line 209, ../../app/stylesheets/main.scss */
+/* line 224, ../../app/stylesheets/main.scss */
 .CodeRay .c {
   color: #BC9358;
   font-style: italic;
 }
 
 /* comment */
-/* line 210, ../../app/stylesheets/main.scss */
+/* line 225, ../../app/stylesheets/main.scss */
 .CodeRay .ch {
   color: #509E4F;
 }
 
 /* escaped character */
-/* line 211, ../../app/stylesheets/main.scss */
+/* line 226, ../../app/stylesheets/main.scss */
 .CodeRay .cl {
   color: #FFF;
 }
 
 /* class */
-/* line 212, ../../app/stylesheets/main.scss */
+/* line 227, ../../app/stylesheets/main.scss */
 .CodeRay .co {
   color: #FFF;
 }
 
 /* constant */
-/* line 213, ../../app/stylesheets/main.scss */
+/* line 228, ../../app/stylesheets/main.scss */
 .CodeRay .fl {
   color: #A4C260;
 }
 
 /* float */
-/* line 214, ../../app/stylesheets/main.scss */
+/* line 229, ../../app/stylesheets/main.scss */
 .CodeRay .fu {
   color: #FFC56D;
 }
 
 /* function */
-/* line 215, ../../app/stylesheets/main.scss */
+/* line 230, ../../app/stylesheets/main.scss */
 .CodeRay .gv {
   color: #D0CFFE;
 }
 
 /* global variable */
-/* line 216, ../../app/stylesheets/main.scss */
+/* line 231, ../../app/stylesheets/main.scss */
 .CodeRay .i {
   color: #A4C260;
 }
 
 /* integer */
-/* line 217, ../../app/stylesheets/main.scss */
+/* line 232, ../../app/stylesheets/main.scss */
 .CodeRay .il {
   background: #151515;
 }
 
 /* inline code */
-/* line 218, ../../app/stylesheets/main.scss */
+/* line 233, ../../app/stylesheets/main.scss */
 .CodeRay .iv {
   color: #D0CFFE;
 }
 
 /* instance variable */
-/* line 219, ../../app/stylesheets/main.scss */
+/* line 234, ../../app/stylesheets/main.scss */
 .CodeRay .pp {
   color: #E7BE69;
 }
 
 /* doctype */
-/* line 220, ../../app/stylesheets/main.scss */
+/* line 235, ../../app/stylesheets/main.scss */
 .CodeRay .r {
   color: #CB7832;
 }
 
 /* keyword */
-/* line 221, ../../app/stylesheets/main.scss */
+/* line 236, ../../app/stylesheets/main.scss */
 .CodeRay .rx {
   color: #A4C260;
 }
 
 /* regex */
-/* line 222, ../../app/stylesheets/main.scss */
+/* line 237, ../../app/stylesheets/main.scss */
 .CodeRay .s {
   color: #A4C260;
 }
 
 /* string */
-/* line 223, ../../app/stylesheets/main.scss */
+/* line 238, ../../app/stylesheets/main.scss */
 .CodeRay .sy {
   color: #6C9CBD;
 }
 
 /* symbol */
-/* line 224, ../../app/stylesheets/main.scss */
+/* line 239, ../../app/stylesheets/main.scss */
 .CodeRay .ta {
   color: #E7BE69;
 }
 
 /* html tag */
-/* line 225, ../../app/stylesheets/main.scss */
+/* line 240, ../../app/stylesheets/main.scss */
 .CodeRay .pc {
   color: #6C9CBD;
 }
