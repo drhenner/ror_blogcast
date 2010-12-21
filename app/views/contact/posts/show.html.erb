@@ -1,0 +1,31 @@
+<h1> Contact Us </h1>
+
+<p>
+  <strong>Topic:</strong>
+  <%= @post.comment_type %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @post.name %>
+</p>
+
+<p>
+  <strong>Website:</strong>
+  <%= @post.website %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @post.email %>
+</p>
+
+<p class='span-14'>
+  <strong>Content:</strong>
+  <%= @post.content %>
+</p>
+
+<%= link_to 'Back to Blog', posts_path, :class => 'button' %>
+<% if current_user %>
+  <p><%= link_to "Posts", contact_posts_path, :class => 'button' %></p>
+<% end %>

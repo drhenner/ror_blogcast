@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20101221041234) do
+ActiveRecord::Schema.define(:version => 20101221043417) do
 
   create_table "comments", :force => true do |t|
     t.string   "name"
@@ -47,6 +47,9 @@ ActiveRecord::Schema.define(:version => 20101221041234) do
     t.string   "author"
     t.text     "markdown"
     t.boolean  "commentable"
+    t.string   "name"
+    t.string   "website"
+    t.string   "email"
   end
 
   create_table "spams", :force => true do |t|

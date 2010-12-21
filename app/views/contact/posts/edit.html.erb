@@ -1,0 +1,8 @@
+<h1> Contact Us </h1>
+
+<%= form_for(@post, :url => contact_post_path(@post)) do |f| %>
+  <%= render :partial => 'form', :locals => {:f => f} %>
+<% end %>
+
+  <%= link_to 'Show', contact_post_path( @post ), :class => 'button' %> |
+  <%= link_to 'View All', contact_posts_path, :class => 'button' %>

@@ -44,6 +44,7 @@ class CommentsController < ApplicationController
        render_404
     else
        @comment = @post.comments.build(params[:comment])
+       @comment.comment_type = 'comment'
 
        #Comment properties business logic
        @comment.bang(current_user, request)

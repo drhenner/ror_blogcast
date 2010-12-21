@@ -1,0 +1,7 @@
+<h1> Contact Us </h1>
+
+<%= form_for(@post, :url => contact_posts_path(@post)) do |f| %>
+  <%= render :partial => 'form', :locals => {:f => f} %>
+<% end %>
+
+  <%= link_to 'Back to Blog', posts_path, :class => 'button' %>

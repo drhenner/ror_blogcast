@@ -1,14 +1,14 @@
 class Comment < ActiveRecord::Base
   belongs_to :post
-  
+
   validates_presence_of :content
-  
+
   include Rakismet::Model
-  attr_accessible :name, :email, :website, :content
+  attr_accessible :name, :email, :website, :content,:comment_type
   rakismet_attrs :author => :name,
                  :author_email => :email,
                  :author_url => :website
-  
+
   def bang(current_user, request)
     #Comment properties business logic
     if current_user
@@ -28,7 +28,7 @@ class Comment < ActiveRecord::Base
     if self.website.downcase == "website"
       self.website = ""
     end
-    
+
     #Check for spam
     self.comment_type = "comment"
     self.user_ip = request.remote_ip
@@ -36,7 +36,7 @@ class Comment < ActiveRecord::Base
     self.referrer = request.referrer
     self.permalink = request.referrer
   end
-  
+
   def slice_and_dice(spam)
     self.admin = false
     self.name =  spam.name

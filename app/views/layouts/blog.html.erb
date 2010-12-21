@@ -21,6 +21,11 @@
 <%= javascript_include_tag "blog" %>
 </head><body id='home'>
 
+  <div class="bp">
+    <%= raw "<p class='flash_notice'> #{notice}</p>"  if notice %>
+    <%= raw "<p class='flash_error'>#{alert}</p>"     if alert %>
+  </div>
+
 <% if current_user %>
 <div class="adminbar">
 <ul>
@@ -64,19 +69,28 @@
 </div><!-- footer -->
 <% if Rails.env.production? && !current_user %>
 
-<script type="text/javascript">
+  <script type="text/javascript">
 
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'Your Google Analytics Account']);
-  _gaq.push(['_trackPageview']);
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'Your Google Analytics Account']);
+    _gaq.push(['_trackPageview']);
 
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
 
-</script>
+  </script>
 
 <% end %>
+
+<script>
+  jQuery(window).ready(
+    function() {
+      jQuery('.flash_notice').delay(9000).slideUp( 'slow');
+      jQuery('.flash_error').delay(11000).slideUp( 'slow');
+    }
+  );
+</script>
 </body></html>

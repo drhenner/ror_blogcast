@@ -1,0 +1,23 @@
+<h1> Contacts </h1>
+
+<table class='pretty_table'>
+  <tr>
+    <th>Topic</th>
+    <th>Name</th>
+    <th>Website</th>
+    <th>Email</th>
+  </tr>
+  <% for post in @posts %>
+    <tr>
+      <td><%= post.comment_type %></td>
+      <td><%= post.name %></td>
+      <td><%= post.website %></td>
+      <td><%= post.email %></td>
+      <td><%= link_to "Show", contact_post_path(post) %></td>
+      <td><%= link_to "Edit", edit_contact_post_path(post) %></td>
+      <td><%= link_to "Destroy", contact_post_path(post), :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Post", new_contact_post_path, :class => 'button' %></p>
