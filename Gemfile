@@ -36,7 +36,7 @@ group :development do
   gem "autotest-rails-pure"
 
   gem "rails-erd"
-  #gem "ruby-debug19"
+  gem "ruby-debug19"
   #gem "ruby-debug"
 end
 
