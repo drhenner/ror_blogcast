@@ -26,12 +26,12 @@ module DocEcommerce
     # Run "rake -D time" for a list of tasks for finding time zone names. Default is UTC.
     # config.time_zone = 'Central Time (US & Canada)'
     config.time_zone = 'Eastern Time (US & Canada)'
-    
+
     config.generators do |g|
       g.test_framework  :rspec, :fixture => true
       g.fixture_replacement :factory_girl , :dir=>"spec/factories"
     end
-    
+
     # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
@@ -44,14 +44,14 @@ module DocEcommerce
 
     # Configure sensitive parameters which will be filtered from the log file.
     config.filter_parameters += [:password, :password_confirmation]
-    
-    
+
+
     #Rakismet
-    #Akismet (http://akismet.com/) is a collaborative spam filtering service. 
-    #Rakismet is easy Akismet integration with Rails and rack apps. 
+    #Akismet (http://akismet.com/) is a collaborative spam filtering service.
+    #Rakismet is easy Akismet integration with Rails and rack apps.
     #TypePad's AntiSpam service and generic Akismet endpoints are supported.
-    config.rakismet.key  = 'Your Akismet Key'
-    config.rakismet.url  = 'http://example-domain.com/blog'
+    config.rakismet.key  = 'a5637d679510'
+    config.rakismet.url  = 'http://www.ror-e.com/posts'
     config.rakismet.host = 'rest.akismet.com'
   end
 end
