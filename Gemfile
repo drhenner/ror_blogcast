@@ -34,7 +34,7 @@ gem 'rakismet'
 group :development do
   gem 'awesome_print'
   gem "autotest-rails-pure"
-
+  gem "nifty-generators", :git => 'git://github.com/drhenner/nifty-generators.git'
   gem "rails-erd"
   #gem "ruby-debug19"
   #gem "ruby-debug"
