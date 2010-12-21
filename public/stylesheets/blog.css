@@ -99,6 +99,9 @@ kbd, code, tt {
   font: normal 12px/16px 'Monaco', 'Courier New', Courier, monospace;
 }
 
+.pretty_table th,.pretty_table td {
+  padding: 4px 7px 4px 5px;
+}
 /*-----------------------------------------------------------
           LAYOUT
 -----------------------------------------------------------*/
@@ -149,6 +152,15 @@ body {
   font-size: 0.3em;
 }
 
+.flash_notice {
+  padding: 0.8em;
+  margin-bottom: 1em;
+  border: 2px solid #dddddd;
+  background-color: #791D1D;
+  background: #fff6bf;
+  color: #514721;
+  border-color: #ffd324;
+}
 /*-----------------------------------------------------------
         ADMINBAR
 -----------------------------------------------------------*/
