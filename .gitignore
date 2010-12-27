@@ -21,7 +21,6 @@ nbproject
 public/assets/**/*
 public/assets/*
 .rvmrc
-config/config.yml
 solr/data
 coverage/*
 Gemfile.lock
