@@ -10,13 +10,16 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20101221043417) do
+ActiveRecord::Schema.define(:version => 20101221041234) do
 
   create_table "comments", :force => true do |t|
     t.string   "name"
     t.string   "email"
     t.string   "website"
+    t.integer  "post_id"
     t.text     "content"
+    t.integer  "commentable_id"
+    t.string   "commentable_type"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "comment_type"
@@ -24,7 +27,6 @@ ActiveRecord::Schema.define(:version => 20101221043417) do
     t.string   "user_ip"
     t.string   "user_agent"
     t.string   "referrer"
-    t.integer  "post_id"
     t.boolean  "admin"
   end
 
@@ -41,15 +43,12 @@ ActiveRecord::Schema.define(:version => 20101221043417) do
     t.string   "title"
     t.text     "content"
     t.boolean  "open"
+    t.boolean  "commentable"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.datetime "posted_at"
     t.string   "author"
     t.text     "markdown"
-    t.boolean  "commentable"
-    t.string   "name"
-    t.string   "website"
-    t.string   "email"
   end
 
   create_table "spams", :force => true do |t|

@@ -9,7 +9,7 @@ development:
   adapter: mysql2
   encoding: utf8
   reconnect: false
-  database: doc_ecommerce_development
+  database: ror_blogcast_development
   pool: 5
   username: root
   password:
@@ -22,7 +22,7 @@ test:
   adapter: mysql2
   encoding: utf8
   reconnect: false
-  database: doc_ecommerce_test
+  database: ror_blogcast_test
   pool: 5
   username: root
   password:
@@ -32,7 +32,7 @@ production:
   adapter: mysql2
   encoding: utf8
   reconnect: false
-  database: doc_ecommerce_production
+  database: ror_blogcast_production
   pool: 5
   username: root
   password:

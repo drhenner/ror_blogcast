@@ -7,23 +7,6 @@ DocEcommerce::Application.routes.draw do
   # first created -> highest priority.
 
   root :to => "welcome#index"
-  namespace :docs do
-    resource :installation, :only => [:show]
-    resource :config,       :only => [:show]
-    resource :product,      :only => [:show]
-    resource :purchase_order,      :only => [:show]
-    resource :shopping_cart,      :only => [:show]
-    resource :admin_cart,      :only => [:show]
-    resource :shipment,      :only => [:show]
-    resource :fulfillment,      :only => [:show]
-    resource :wish_list,      :only => [:show]
-    resource :cart_history,      :only => [:show]
-    resource :solr,      :only => [:show]
-  end
-  namespace :info do
-    resource :about,      :only => [:show]
-    resource :about_ror,  :only => [:show]
-  end
 
   ###############################################
 

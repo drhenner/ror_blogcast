@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html><head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-<title>RoR-e: Rails Ecommerce done right.</title>
+<title>RoR-e.com: ror_blogcast </title>
 <meta name="author" content="RoR-e Blog"/>
-<meta name="description" content="Ruby on Rails Ecommerce Blog"/>
+<meta name="description" content="Ruby on Rails Blog"/>
 <%= csrf_meta_tag %>
 <%= yield :robots %>
 <%= stylesheet_link_tag "blog" %> <%= yield :modstyles %>
@@ -63,8 +63,8 @@
 
 <div class="footer">
   <p>
-    Content copyright © 2010 <a href="#">RoR-e.com, LLC</a>.
-    <span><a href="http://github.com/drhenner/ror_ecommerce">GitHub</a></span>
+    Content copyright © 2010 <a href="#"><%= BLOG_CONFIG['your_domain_name'] %></a>.
+    <span><a href="http://github.com/drhenner/ror_blogcast">GitHub</a></span>
   </p>
 </div><!-- footer -->
 <% if Rails.env.production? && !current_user %>
@@ -72,8 +72,8 @@
   <script type="text/javascript">
 
     var _gaq = _gaq || [];
-    _gaq.push(['_setAccount', 'UA-20389394-1']);
-    _gaq.push(['_setDomainName', 'none']);
+    _gaq.push(['_setAccount', BLOG_CONFIG['google_analytics_account_name']]);
+    _gaq.push(['_setDomainName', BLOG_CONFIG['your_domain_name']]);
     _gaq.push(['_setAllowLinker', true]);
     _gaq.push(['_trackPageview']);
 

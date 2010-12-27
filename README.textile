@@ -1,3 +1,17 @@
 h1. Over-View
 
-This site will house the documentation for the "ror_ecommerce":http://github.com/drhenner/ror_ecommerce ecommerce platform. There is a lot of work to be done. My plan is to create an ecommerce in 15-minutes video. You will need to customize the platform but it should save you hundreds of hours of work.
+This is the home of a blog project.  Make sure you:
+
+* bundle install
+* create development database
+* edit config/database.yml
+* edit config/config.yml
+* run rake db:migrate
+* run rake db:seed (change the password / login to something that works for you)
+
+Your login name is now admin and password is admin if you didn't change anything
+
+h2. ToDo
+
+* Create tests.  This project didn't have tests so I will add them ASAP.
+* clean up controller code and models (too much logic in the controller)

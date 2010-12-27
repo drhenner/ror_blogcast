@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Ruby on Rails E-commerce</title>
+  <title>Ruby on Rails blogcast</title>
   <%= stylesheet_link_tag 'style2.css', :media => 'screen' %>
   <%= javascript_include_tag 'jquery.min', 'rails', 'jquery-ui-1.8.5.custom.min','application' %>
   <%= %>
@@ -28,8 +28,8 @@
   <script type="text/javascript">
 
     var _gaq = _gaq || [];
-    _gaq.push(['_setAccount', 'UA-20389394-1']);
-    _gaq.push(['_setDomainName', 'none']);
+    _gaq.push(['_setAccount', BLOG_CONFIG['google_analytics_account_name']]);
+    _gaq.push(['_setDomainName', BLOG_CONFIG['your_domain_name']]);
     _gaq.push(['_setAllowLinker', true]);
     _gaq.push(['_trackPageview']);
 
