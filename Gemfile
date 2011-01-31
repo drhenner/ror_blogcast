@@ -46,15 +46,16 @@ group :test do
   gem 'factory_girl_rails'
   gem 'mocha', :require => false
   gem 'rspec-rails-mocha'
+  gem 'email_spec'
 
   gem "shoulda"
 
-  gem "rspec-rails",  ">= 2.0.0"
-  gem "rspec",        ">=  2.0.0"
+  gem "rspec-rails",  "~> 2.4.0"
+  gem "rspec",        "~> 2.4.0"
 
-  gem "rspec-core",         ">=  2.0.0"
-  gem "rspec-expectations", ">=  2.0.0"
-  gem "rspec-mocks",        ">=  2.0.0"
+  gem "rspec-core",         "~> 2.4.0"
+  gem "rspec-expectations", "~> 2.4.0"
+  gem "rspec-mocks",        "~> 2.4.0"
 
   gem "faker"
   gem "autotest"
