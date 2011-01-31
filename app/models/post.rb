@@ -12,4 +12,21 @@ class Post < ActiveRecord::Base
     #3rd: Remove leading/trailing separator.
     "#{id}-#{title.downcase.gsub(/[^a-zA-Z0-9]+/, '-').gsub(/-{2,}/, '-').gsub(/^-|-$/, '')}"
   end
+
+  # Creates a new post from a draft
+  #
+  # param[Draft]
+  # return[Boolean]
+  def self.create_from_draft(draft)
+      post = Post.new(
+                 :title       =>  draft.title,
+                 :markdown    =>  draft.markdown,
+                 :content     =>  draft.content,
+                 :author      =>  draft.author,
+                 :commentable =>  true,
+                 :posted_at   =>  Time.now
+              )
+
+      post.save ? post : false
+  end
 end

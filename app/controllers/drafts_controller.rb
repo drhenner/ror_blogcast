@@ -30,16 +30,7 @@ class DraftsController < ApplicationController
     end
 
     if params[:save_post]
-      @post = Post.new
-
-      @post.title = @draft.title
-      @post.markdown = @draft.markdown
-      @post.content = @draft.content
-      @post.author = @draft.author
-      @post.commentable = true
-      @post.posted_at = Time.now
-
-      if @post.save
+      if @post = Post.save_from_draft(@draft)
         @draft.destroy
         redirect_to(@post, :notice => 'Post was successfully created.')
       else
